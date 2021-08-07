@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ứng Dụng Chuyển Đổi Tiền Tệ</title>
+    <style>
+        table {
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
+<table align="center" style="font-size: 20px">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th><input id="amount1" type="text" name="amount"></th>
+        <th><select id="Tien1">
+            <option value="VN">VietNam</option>
+            <option value="USA">USD</option>
+        </select></th>
+        <th><select id="Tien2">
+            <option value="USA">USD</option>
+            <option value="VN">VietNam</option>
+        </select></th>
+        <th><input type="button" value="Convert" style="width: 100px;background-color: dodgerblue" onclick="calc()">
+        </th>
+    </tr>
+    <tr>
+        <td id="result">Result:</td>
+    </tr>
+</table>
 
 </body>
+
+<script>
+    let result;
+    let a = document.getElementById("amount1").value;
+
+    function calc() {
+        let m = document.getElementById("amount1").value;
+        m = parseInt(m);
+        let select1 = document.getElementById("Tien1").value;
+        let select2 = document.getElementById("Tien2").value;
+        if (select1 == select2) {
+            if (select2 == "USA") result = m + "USD";
+            else result = m + "VND";
+        } else if (select2 != select1) {
+            if (select2 == "USA") result = m / 23000 + "USD";
+            else result = m * 23000 + "VND";
+        }
+        document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+</script>
 </html>
