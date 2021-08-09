@@ -27,7 +27,8 @@
             <option value="USA">USD</option>
             <option value="VN">VietNam</option>
         </select></th>
-        <th><input type="button" value="Convert" style="width: 100px;background-color: dodgerblue" onclick="calc()">
+        <th><input type="button" value="Convert" style="width: 100px;background-color: dodgerblue"
+                   onclick="calculation()">
         </th>
     </tr>
     <tr>
@@ -41,17 +42,23 @@
     let result;
     let a = document.getElementById("amount1").value;
 
-    function calc() {
+    function calculation() {
         let m = document.getElementById("amount1").value;
         m = parseInt(m);
         let select1 = document.getElementById("Tien1").value;
         let select2 = document.getElementById("Tien2").value;
         if (select1 == select2) {
-            if (select2 == "USA") result = m + "USD";
-            else result = m + "VND";
+            if (select2 == "USA") {
+                result = m + "USD";
+            } else {
+                result = m + "VND";
+            }
         } else if (select2 != select1) {
-            if (select2 == "USA") result = m / 23000 + "USD";
-            else result = m * 23000 + "VND";
+            if (select2 == "USA") {
+                result = m / 23000 + "USD";
+            } else {
+                result = m * 23000 + "VND";
+            }
         }
         document.getElementById("result").innerHTML = "Result: " + result;
     }
