@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+<form>
+    <button onclick="bai1()">Bài 1</button>
+    <br/>
+    <button onclick="bai2()">Bài 2</button>
+    <br/>
+    <button onclick="bai3()">Bài 3</button>
+    <br/>
+    <button onclick="bai4()">Bài 4</button>
+    <br/>
+    <button onclick="bai5()">Bài 5</button>
+    <br/>
+    <button onclick="bai6()">Bài 6</button>
+    <br/>
+    <button onclick="bai7()">Bài 7</button>
+    <br/>
+
+</form>
+</body>
+</html>
+<script>
+    function bai1() {
+        let a = parseFloat(prompt("Nhập a: "));
+        let b = parseFloat(prompt("Nhập b: "));
+        if (a % b == 0) {
+            alert("a chia hết cho b");
+        } else {
+            alert("a không chia hết cho b");
+        }
+    }
+
+    function bai2() {
+        let a = parseFloat(prompt("Nhập tuổi: "));
+        if (a >= 15) {
+            alert("Đủ điều kiện học lớp 10");
+        } else {
+            alert("Không đủ điều kiện học lớp 10");
+        }
+    }
+
+    function bai3() {
+        let a = parseInt(prompt("Nhập a: "));
+        if (a > 0) {
+            alert("Số dương");
+        } else if (a < 0) {
+            alert("Số âm");
+        } else {
+            alert("Số không dương không âm");
+        }
+    }
+
+    function bai4() {
+        let a = parseFloat(prompt("Nhập a: "));
+        let b = parseFloat(prompt("Nhập b: "));
+        let c = parseFloat(prompt("Nhập c: "));
+        let max = a
+        if (max < b) {
+            max = b
+        }
+        if (max < c) {
+            max = c
+        }
+        alert("Số lớn nhất trong 3 số là: " + max);
+    }
+
+    function bai5() {
+        let a = parseFloat(prompt("Nhập điểm bài tập: "));
+        let b = parseFloat(prompt("Nhập điểm giữa kì: "));
+        let c = parseFloat(prompt("Nhập điểm cuối kì: "));
+        let d = a * 0.2 + b * 0.3 + c * 0.5;
+        if (d >= 8.5) {
+            alert("Loại A");
+        } else if (d >= 7) {
+            alert("Loại B");
+        } else if (d >= 5.5) {
+            alert("Loại C");
+        } else if (d >= 4) {
+            alert("Loại D");
+        } else {
+            alert("Loại F ");
+        }
+    }
+
+    function bai6() {
+        alert("Nếu doanh thu trên 100USD mức hoa hồng nhận được là 10%. \n" +
+            "Nếu doanh thu trên 200USD mức hoa hồng nhận được là 15%. \n" +
+            "Nếu doanh thu trên 500USD mức hoa hồng nhận được là 20%. \n" +
+            "Nếu doanh thu trên 1000USD mức hoa hồng nhận được là 30%. \n" +
+            "Nếu doanh thu trên 2000USD mức hoa hồng nhận được là 40%.");
+        let a = parseFloat(prompt("Nhập doanh số bán hàng: "));
+        if (a >= 2000) {
+            alert("Hoa hồng bạn nhận được là 40% và bạn sẽ nhận được " + a * 0.4 + " USD");
+        } else if (a >= 1000) {
+            alert("Hoa hồng bạn nhận được là 30% và bạn sẽ nhận được " + a * 0.3 + " USD");
+        } else if (a >= 500) {
+            alert("Hoa hồng bạn nhận được là 20% và bạn sẽ nhận được " + a * 0.2 + " USD");
+        } else if (a >= 200) {
+            alert("Hoa hồng bạn nhận được là 15% và bạn sẽ nhận được " + a * 0.15 + " USD");
+        } else {
+            alert("Hoa hồng bạn nhận được là 10% và bạn sẽ nhận được " + a * 0.1 + " USD");
+        }
+    }
+
+
+    function bai7() {
+        alert("Phí thuê bao bắt buộc là 25 nghìn.\n" +
+            "600 đồng cho mỗi gọi của 50 phút đầu tiên.\n" +
+            "400 đồng cho mỗi phút gọi của 150 phút tiếp theo.\n" +
+            "200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.");
+        let a = parseInt(prompt("Nhập số phút gọi: "));
+        let b;
+        let c = 150;
+        let d = 50;
+        if (a > 200) {
+            b = a - 200;
+            a = b * 200 + c * 400 + d * 600 + 25000;
+        } else if (a > 50) {
+            b = a - 50;
+            a = b * 400 + d * 600 + 25000;
+        } else {
+            a = a * 600 + 25000;
+        }
+        alert("Cước phí điện thoại là: " + a +" VND");
+    }
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input id="nhap" type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="2" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="3" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="+" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="5" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="6" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="-" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="8" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="9" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="*" onclick="nhap('*')" style="height: 40px; width: 40px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="c" onclick="xoa()" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="0" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+        <td><input type="button" value="=" onclick="tinh()" style="height: 40px; width: 40px" onclick="tinh()"></td>
+        <td><input type="button" value="/" onclick="nhap(this.value)" style="height: 40px; width: 40px"></td>
+    </tr>
+</table>
+<script>
+    function nhap(so) {
+        document.getElementById("nhap").value += so;
+    }
+
+    function tinh() {
+        let string = document.getElementById("nhap").value;
+        document.getElementById("nhap").value = eval(string);
+    }
+
+    function xoa() {
+        document.getElementById("nhap").value = "";
+    }
+</script>
+</body>
