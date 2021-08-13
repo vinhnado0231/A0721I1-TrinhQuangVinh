@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+    <style>
+        img {
+            width: 600px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body style="text-align: center">
+<h1>Game puzzle</h1>
+<img id="head" onclick="convert(1)" src="dog1.jpg" onchange="End()"/> <br>
+<img id="body" onclick="convert(2)" src="husky2.jpg" onchange="End()"/><br>
+<img id="feet" onclick="convert(3)" src="shiba3.jpg" onchange="End()"/>
+<script>
+    let obj1 = document.getElementById("head");
+    let obj2 = document.getElementById("body");
+    let obj3 = document.getElementById("feet");
+    obj1.value = "dog1";
+    obj2.value = "husky2";
+    obj3.value = "shiba3";
+
+    function convert(value) {
+        switch (value) {
+            case 1:
+                if (obj1.getAttribute('src') === "dog1.jpg") {
+                    obj1.src = "husky1.jpg";
+                    obj1.value = "husky1"
+                } else if (obj1.getAttribute('src') === "husky1.jpg") {
+                    obj1.src = "shiba1.jpg";
+                    obj1.value = "shiba1";
+                } else {
+                    obj1.src = "dog1.jpg";
+                    obj1.value = "dog1";
+                }
+
+                setTimeout(End, 1000);
+                break;
+            case 2:
+                if (obj2.getAttribute('src') === "dog2.jpg") {
+                    obj2.src = "husky2.jpg";
+                    obj2.value = "husky2"
+                } else if (obj2.getAttribute('src') === "husky2.jpg") {
+                    obj2.src = "shiba2.jpg";
+                    obj2.value = "shiba2";
+                } else {
+                    obj2.src = "dog2.jpg";
+                    obj2.value = "dog2";
+                }
+
+                setTimeout(End, 1000);
+                break;
+            case 3:
+                if (obj3.getAttribute('src') === "dog3.jpg") {
+                    obj3.src = "husky3.jpg";
+                    obj3.value = "husky3"
+                } else if (obj3.getAttribute('src') === "husky3.jpg") {
+                    obj3.src = "shiba3.jpg";
+                    obj3.value = "shiba3";
+                } else {
+                    obj3.src = "dog3.jpg";
+                    obj3.value = "dog3";
+                }
+
+                setTimeout(End, 1000);
+                break;
+        }
+
+
+    }
+
+    function End() {
+        if (obj1.getAttribute('src') === "dog1.jpg" && obj2.getAttribute('src') === "dog2.jpg" && obj3.getAttribute('src') === "dog3.jpg") alert("Congratulation");
+        if (obj1.getAttribute('src') === "husky1.jpg" && obj2.getAttribute('src') === "husky2.jpg" && obj3.getAttribute('src') === "husky3.jpg") alert("Congratulation");
+        if (obj1.getAttribute('src') === "shiba1.jpg" && obj2.getAttribute('src') === "shiba2.jpg" && obj3.getAttribute('src') === "shiba3.jpg") alert("Congratulation");
+    }
+</script>
+</body>
+</html>
