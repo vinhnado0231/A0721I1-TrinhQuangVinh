@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+    <style>
+        body {
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+<h1> Do you love me?</h1>
+<button id="Yes" onclick="Message()" style="position:absolute; left:850px; top:100px;"> Yes</button>
+<button id="No" onmouseover="run()" style="position: absolute;left:980px;top:100px"> No</button>
+<script type="text/javascript">
+    function Message() {
+        alert("<3");
+    }
+
+    objNo = document.getElementById("No");
+
+    function run() {
+        objNo.style.left = Math.round(Math.random() * window.innerWidth) + 'px';
+        objNo.style.top = Math.round(Math.random() * window.innerHeight) + 'px';
+    }
+</script>
+</body>
+</html>
