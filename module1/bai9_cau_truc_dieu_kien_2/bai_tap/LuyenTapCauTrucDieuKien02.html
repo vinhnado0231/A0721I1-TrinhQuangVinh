@@ -2,9 +2,180 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
 </head>
 <body>
-
+<form>
+    <button onclick="bai1()">Bài 1</button>
+    Chuyển từ độ C sang độ F.
+    <br/>
+    <button onclick="bai2()">Bài 2</button>
+    Chuyển từ mét sang feet:
+    <br/>
+    <button onclick="bai3()">Bài 3</button>
+    Tính diện tích hình vuông khi biết cạnh a.
+    <br/>
+    <button onclick="bai4()">Bài 4</button>
+    Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.
+    <br/>
+    <button onclick="bai5()">Bài 5</button>
+    Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+    <br/>
+    <button onclick="bai6()">Bài 6</button>
+    Giải phương trình bậc 1.
+    <br/>
+    <button onclick="bai7()">Bài 7</button>
+    Giải phương trình bậc 2.
+    <br/>
+    <button onclick="bai8()">Bài 8</button>
+    Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và
+    lơn hơn 0.
+    <br/>
+    <button onclick="bai9()">Bài 9</button>
+    Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam
+    giác là:
+    <br/>
+    <button onclick="bai10()">Bài 10</button>
+    Viết chương trình tính giá điện.
+    <br/>
+    <button onclick="bai11()">Bài 11</button>
+    Viết chương trình tính thuế thu nhập cá nhân.
+    <br/>
+    <button onclick="bai12()">Bài 12</button>
+    Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng
+    tháng.
+</form>
 </body>
 </html>
+<script>
+    function bai1() {
+        let C = parseFloat(prompt("Nhập nhiệt độ C cần đổi"));
+        alert(C * 9 / 5 + 32 + " độ F ")
+    }
+
+    function bai2() {
+        let m = parseFloat(prompt("Nhập mét: "))
+        let feet = m * 3.281;
+        alert(m + " m = " + feet + " feet");
+    }
+
+    function bai3() {
+        let a = parseFloat(prompt('Nhập cạnh của hình vuông'));
+        let s = a * a;
+        alert("diện tích hình vuông: " + s);
+    }
+
+    function bai4() {
+        let d = parseFloat(prompt("Nhập chiều dài: "));
+        let r = parseFloat(prompt("Nhập chiều rộng: "));
+        alert("Diện tích Hình chữ nhật: " + d * r);
+    }
+
+    function bai5() {
+        let a = parseFloat(prompt("Nhập cạnh góc vuông thứ nhất: "));
+        let b = parseFloat(prompt("Nhập cạnh góc vuông thứ hai: "));
+        alert("Diện tích tam giác vuông: " + a * b / 2);
+    }
+
+    function bai6() {
+        alert("Phương trình bậc nhất có dạng y = ax + b ");
+        let a = parseFloat(prompt("Nhập hệ số a: "));
+        let b = parseFloat(prompt("Nhập hệ số b: "));
+        if (a === 0) {
+            if (b === 0) {
+                alert("Phương trình có vô số nghiệm");
+            } else {
+                alert("Phương trình vô nghiệm");
+            }
+        } else {
+            alert("Phương trình có nghiệm duy nhất bằng: " + (-b / a))
+        }
+    }
+
+    function bai7() {
+        alert("Phương trình bậc hai có dạng y= ax^2 + bx +c ")
+        let a = parseFloat(prompt("Nhập hệ số a: "));
+        let b = parseFloat(prompt("Nhập hệ số b: "));
+        let c = parseFloat(prompt("Nhập hệ số c: "));
+        let d, x, x1, x2;
+        if (a !== 0) {
+            d = b * b - 4 * a * c;
+            if (d > 0) {
+                alert("Phương trình có 2 nghiệm");
+                x1 = (-b + Math.sqrt(d)) / (2 * a);
+                alert("Nghiệm thứ nhất x1= " + x1);
+                x2 = (-b - Math.sqrt(d)) / (2 * a);
+                alert("Nghiệm thứ nhất x2= " + x2);
+            } else if (d === 0) {
+                x = -b / (2 * a);
+                alert("Phương trình có nghiệm kép x1 = x2 = " + x);
+            } else alert("Phương trình vô nghiệm");
+        } else ("Phương trình trên không phải phương trình bậc 2");
+    }
+
+    function bai8() {
+        let age = parseInt(prompt("Nhập tuổi của bạn:"));
+        if ((age < 0) || (age > 120)) alert("Không phải là tuổi của bạn");
+        else alert("Đúng rồi!!!");
+    }
+
+    function bai9() {
+        let a = parseFloat(prompt("Nhập cạnh thứ nhất: "));
+        let b = parseFloat(prompt("Nhập cạnh thứ hai: "));
+        let c = parseFloat(prompt("Nhập cạnh thứ ba: "));
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            alert("là 3 cạnh của một tam giác");
+        } else {
+            alert("Không phải là 3 cạnh của một Tam giác !");
+        }
+    }
+
+    function bai10() {
+        let a = parseFloat(prompt("Nhập chữ điện (kWh)"));
+        let b;
+        if (a <= 50) {
+            b = a * 1678
+        } else if (a <= 100) {
+            b = (a - 50) * 1734 + 50 * 1678;
+        } else if (a <= 200) {
+            b = (a - 100) * 2014 + 50 * 1734 + 50 * 1678;
+        } else if (a <= 300) {
+            b = (a - 200) * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678;
+        } else if (a <= 400) {
+            b = (a - 300) * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678;
+        } else {
+            b = (a - 400) * 2927 + 100 * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678;
+        }
+        alert("Giá tiền điện của bạn sau thuế là: " + (b + b * 10 / 100) + " vnd");
+    }
+
+    function bai11() {
+        let ThuNhap = parseFloat(prompt("Tiền thu nhập hằng tháng của bạn: (triệu)"));
+        let thue;
+        if (ThuNhap <= 5) {
+            thue = ThuNhap * 5 / 100;
+        } else if (ThuNhap <= 10) {
+            thue = ThuNhap * 10 / 100;
+        } else if (ThuNhap <= 18) {
+            thue = ThuNhap * 15 / 100;
+        } else if (ThuNhap <= 32) {
+            thue = ThuNhap * 20 / 100;
+        } else if (ThuNhap <= 52) {
+            thue = ThuNhap * 25 / 100;
+        } else if (ThuNhap <= 80) {
+            thue = ThuNhap * 30 / 100;
+        } else {
+            thue = ThuNhap * 35 / 100;
+        }
+        alert("Thuế thu nhâp của bạn là: " + thue * Math.pow(10, 6) + " vnd");
+    }
+
+    function bai12() {
+        let tiengui = parseInt(prompt("Nhập số tiền bạn gửi: "));
+        let laisuat = parseInt(prompt("Lãi suất theo năm(%): "));
+        let thoihan = parseInt(prompt("Thời hạn bạn sẽ rút(năm): "));
+        let tienlai;
+        tienlai = tiengui * Math.pow(1 + laisuat / 100, thoihan);
+        alert("Lãi của ban: " + tienlai + " vnd");
+    }
+</script>
