@@ -35,7 +35,7 @@
     function bai1() {
         let a = parseFloat(prompt("Nhập a: "));
         let b = parseFloat(prompt("Nhập b: "));
-        if (a % b == 0) {
+        if (a % b === 0) {
             alert("a chia hết cho b");
         } else {
             alert("a không chia hết cho b");
@@ -82,13 +82,13 @@
         let c = parseFloat(prompt("Nhập điểm cuối kì: "));
         let d = a * 0.2 + b * 0.3 + c * 0.5;
         if (d >= 8.5) {
-            alert("Loại A");
+            alert("Loại A ");
         } else if (d >= 7) {
-            alert("Loại B");
+            alert("Loại B ");
         } else if (d >= 5.5) {
-            alert("Loại C");
+            alert("Loại C ");
         } else if (d >= 4) {
-            alert("Loại D");
+            alert("Loại D ");
         } else {
             alert("Loại F ");
         }
