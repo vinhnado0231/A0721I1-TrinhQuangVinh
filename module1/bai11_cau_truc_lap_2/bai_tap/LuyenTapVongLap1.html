@@ -109,19 +109,39 @@
             if (number % 3 === 0) {
                 if (number % 5 === 0) {
                     document.write("FizzBuzz <br>");
-                }else{
+                } else {
                     document.write("Fizz <br>");
                 }
-            }else if(number %5 ===0){
+            } else if (number % 5 === 0) {
                 document.write("Buzz <br>");
-            }else {
-                document.write(number+ "<br>");
+            } else {
+                document.write(number + "<br>");
             }
         }
     }
 
     function bai8() {
-
+        alert('Mời bạn nhập khoảng [a,b]')
+        let a = parseInt(prompt("Nhập a: "));
+        let b = parseInt(prompt("Nhập b: "));
+        if (a >= b) {
+            alert("Khoảng số không hợp lệ")
+            return 0;
+        }
+        let c = Math.round(Math.random() * (b - a) + a);
+        let d;
+        alert(c)
+        while (1) {
+            d = parseInt(prompt("Nhập số cần đoán: "));
+            if (d > c) {
+                alert("Lớn hơn số cần đoán");
+            } else if (d < c) {
+                alert("Bé hơn số cần đoán");
+            } else {
+                alert('Chúc mừng bạn đã đoán đúng');
+                break;
+            }
+        }
     }
 
     function Fibonacci(n) {
