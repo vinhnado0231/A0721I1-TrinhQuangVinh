@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let n = parseFloat(prompt("Nhập số lượng số nguyên tố cần được in ra:"));
+    let count = 0;
+    let i = 2;
+    let result = "";
+    while (count < n) {
+        if (check(i)) {
+            if (count < n - 1) {
+                result += i + ",";
+            } else {
+                result += i + ".";
+            }
+            count++;
+        }
+        i++;
+    }
+    document.write(result);
+
+    function check(n) {
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+</script>
+</body>
+</html>

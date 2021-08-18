@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 01</title>
+</head>
+<body>
+<form>
+    <button onclick="bai1()">Bài 1</button>
+    Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
+    <br/>
+    <button onclick="bai2()">Bài 2</button>
+    Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên
+    100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+    <br/>
+    <button onclick="bai3()">Bài 3</button>
+    Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+    <br/>
+    <button onclick="bai4()">Bài 4</button>
+    Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+    <br/>
+    <button onclick="bai5()">Bài 5</button>
+    Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+    <br/>
+    <button onclick="bai6()">Bài 6</button>
+    Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+    <br/>
+    <button onclick="bai7()">Bài 7</button>
+    Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra
+    "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+    <br/>
+    <button onclick="bai8()">Bài 8</button>
+    Game đoán số
+</form>
+</body>
+</html>
+<script>
+    function bai1() {
+        let number = 1;
+        for (; number <= 100; number++) {
+            console.log(number);
+            if (number === 99) {
+                alert("Complete!");
+            }
+        }
+    }
+
+    function bai2() {
+        let temp = parseFloat(prompt("Nhập nhiệt độ hiện tại"));
+        if (temp > 100) alert("Bạn hãy giảm nhiệt độ xuống!");
+        else if (temp < 20) alert("Bạn hãy tăng nhiệt độ lên !");
+        else alert("Nhiệt độ phù hợp");
+    }
+
+    function bai3() {
+        let n = 20;
+        let result = "";
+        for (let i = 1; i <= n; i++) {
+            if (i !== n) {
+                result += Fibonacci(i) + ",";
+            } else {
+                result += Fibonacci(i) + "."
+            }
+        }
+        alert(result);
+    }
+
+
+    function bai4() {
+        let i = 1;
+        let result;
+        while (1) {
+            result = Fibonacci(i);
+            if (result % 5 === 0) {
+                alert("Số đầu tiên chia hết cho 5: " + result);
+                break;
+            }
+            i++;
+        }
+    }
+
+    function bai5() {
+        let n = 20;
+        let result = 0;
+        for (let i = 1; i <= n; i++) {
+            result += Fibonacci(i);
+        }
+        alert(result);
+    }
+
+    function bai6() {
+        let i = 1;
+        let count = 0;
+        let n = 30;
+        let result = 0;
+        while (count < n) {
+            if (i % 7 === 0) {
+                result += i;
+                count++;
+            }
+            i++
+        }
+        alert(result);
+    }
+
+    function bai7() {
+        let number = 1;
+        for (; number <= 100; number++) {
+            if (number % 3 === 0) {
+                if (number % 5 === 0) {
+                    document.write("FizzBuzz <br>");
+                }else{
+                    document.write("Fizz <br>");
+                }
+            }else if(number %5 ===0){
+                document.write("Buzz <br>");
+            }else {
+                document.write(number+ "<br>");
+            }
+        }
+    }
+
+    function bai8() {
+
+    }
+
+    function Fibonacci(n) {
+        if (n === 1 || n === 2) {
+            return 1;
+        }
+        return Fibonacci(n - 1) + Fibonacci(n - 2);
+    }
+</script>
