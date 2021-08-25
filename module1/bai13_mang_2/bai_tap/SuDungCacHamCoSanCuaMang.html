@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<form>
+    <button onclick="bai1()">Bài 1</button>
+    Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau. Ví dụ có mảng chuỗi
+    như sau: myColor = ["Red", "Green", "White", "Black"];
+    Sau khi thực thi chương trình sẽ trả về dạng như sau :
+    "Red,Green,White,Black"
+    <br/>
+    <button onclick="bai2()">Bài 2</button>
+    Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2 số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả
+    của chương trình sẽ là 0-254-6-8.
+    <br/>
+    <button onclick="bai3()">Bài 3</button>
+    Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ
+    hoa. Ví dụ: nếu bạn nhập vào chuỗi 'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK bROWN fOX'.
+</form>
+</body>
+</html>
+<script>
+    function bai1() {
+        let i;
+        let n = parseInt(prompt("Nhập số phần tử trong mảng chuỗi: "));
+        let array = Array(n);
+        for (i = 0; i < n; i++) {
+            array[i] = prompt("Nhập chuỗi thứ " + (i + 1) + " trong mảng:");
+        }
+        alert(array.toString());
+    }
+
+    function bai2() {
+        let number = prompt("Nhập dãy số");
+        let string = number.toString();
+        let result = [string[0]];
+        for (let i = 1; i < string.length; i++) {
+            if (string[i] % 2 === 0 && string[i - 1] % 2 === 0) {
+                result.push("-", string[i]);
+            } else {
+                result.push(string[i]);
+            }
+        }
+        document.write(result.join(''));
+    }
+
+    function bai3() {
+        let str = prompt("Nhập chuỗi");
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = []
+        for(let i=0; i<str.length; i++)
+        {
+            if(UPPER.indexOf(str[i]) !== -1)
+            {
+                result.push(str[i].toLowerCase());
+            }
+            else if(LOWER.indexOf(str[i]) !== -1)
+            {
+                result.push(str[i].toUpperCase());
+            }
+            else
+            {
+                result.push(str[i]);
+            }
+        }
+        document.write(result.join(''));
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+<form>
+    <input type="text" id="input"/>
+    <input type="button" style="width: 50px" value="dịch" onclick="translate1()"/>
+    <p id="result"></p>
+</form>
+<script>
+    function translate1() {
+        let eng = ['hello', 'goodbyle', 'school', 'class', 'technology', 'system'];
+        let vie = ['xin chào', 'tạm biệt', 'trường học', 'lớp', 'công nghệ', 'hệ thống']
+        let string = document.getElementById("input").value;
+        let UPPER = 'ABCDEFGHIKLMNOPQRSTUVWXYZ';
+        let result = [];
+        for (let i = 0; i < string.length; i++) {
+            if (UPPER.indexOf(string[i]) !== -1) {
+                result.push(string[i].toLowerCase());
+            } else {
+                result.push(string[i]);
+            }
+        }
+        result = result.join('')
+        for (let i = 0; i < eng.length; i++) {
+            if (eng[i] === result) {
+                document.getElementById("result").innerText = vie[i];
+                break;
+            } else {
+                document.getElementById("result").innerText = "Không có trong từ điển";
+            }
+        }
+    }
+</script>
+</body>
+</html>

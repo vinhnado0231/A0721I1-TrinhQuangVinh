@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01</title>
+</head>
+<body>
+<button onclick="bai1()">Bài 1</button>
+Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu số
+nguyên lớn hơn hoặc bằng 10.
+<br/>
+<button onclick="bai2()">Bài 2</button>
+Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn
+nhất trong mảng và vị trí của phần tử đó.
+<br/>
+<button onclick="bai3()">Bài 3</button>
+Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các
+phần tử trong mảng.
+<br/>
+<button onclick="bai4()">Bài 4</button>
+Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+<br/>
+<button onclick="bai5()">Bài 5</button>
+Viết chương trình đếm số nguyên âm trong một chuỗiiết chương trình đếm số nguyên âm trong một chuỗi
+<br/>
+<button onclick="bai6()">Bài 6</button>
+Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm
+xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is
+not in the array".
+<br/>
+<button onclick="bai7()">Bài 7</button>
+Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm
+tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần
+tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+<br/>
+<button onclick="bai8()">Bài 8</button>
+Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và
+hiển thị ra mảng đã được sắp xếp.
+<br/>
+<button onclick="bai9()">Bài 9</button>
+Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai
+báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+</body>
+</html>
+<script>
+function bai1() {
+    let arr=[1,2,3,4,5,6,7,8,9,10];
+    let max=arr[0];
+    for(let i=1;i<10;i++){
+        if (max<arr[i]) {
+            max= arr[i];
+        }
+    }
+    alert(max);
+}
+function bai2() {
+    let arr=[1,2,3,4,5,6,7,8,9,10];
+    let max=arr[0];
+    let j;
+    for(let i=1;i<10;i++){
+        if (max<arr[i]) {
+            max= arr[i];
+            j=i;
+        }
+    }
+    alert("Gia tri "+max+" o vi tri "+ (j+1));
+}
+function bai3() {
+
+}
+function bai4() {
+
+}
+function bai5() {
+
+}
+function bai6() {
+
+}
+function bai7() {
+
+}
+function bai8() {
+
+}
+function bai9() {
+
+}
+
+</script>
