@@ -21,7 +21,7 @@ phần tử trong mảng.
 Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
 <br/>
 <button onclick="bai5()">Bài 5</button>
-Viết chương trình đếm số nguyên âm trong một chuỗiiết chương trình đếm số nguyên âm trong một chuỗi
+Viết chương trình đếm số nguyên âm trong một chuỗi.
 <br/>
 <button onclick="bai6()">Bài 6</button>
 Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm
@@ -43,48 +43,146 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
 </body>
 </html>
 <script>
-function bai1() {
-    let arr=[1,2,3,4,5,6,7,8,9,10];
-    let max=arr[0];
-    for(let i=1;i<10;i++){
-        if (max<arr[i]) {
-            max= arr[i];
+    function bai1() {
+        let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
+        let arr = Array(n);
+        InputArray(arr, n);
+        let count = 0;
+        for (let i = 0; i < n; i++) {
+            if (arr[i] >= 10) {
+                count++;
+            }
+        }
+        alert("Có tất cả " + count + " giá trị lớn hơn hoặc bằng 10.");
+    }
+
+    function bai2() {
+        let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
+        let arr = Array(n);
+        InputArray(arr, n);
+        let max = arr[0];
+        let j;
+        for (let i = 1; i < n; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+                j = i;
+            }
+        }
+        alert("Giá trị " + max + " ở vị trí " + (j + 1) + " là giá trị lớn nhất trong mảng.");
+    }
+
+    function bai3() {
+        let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
+        let arr = Array(n);
+        InputArray(arr, n);
+        let max = arr[0];
+        let avg = arr[0];
+        for (let i = 1; i < n; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+            avg += arr[i];
+        }
+        avg /= n;
+        alert("Giá trị " + max + " là giá trị lớn nhất trong mảng.");
+        alert("Giá trị trung bình của mảng là: " + avg);
+    }
+
+    function bai4() {
+        let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
+        let arr = Array(n);
+        InputArray(arr, n);
+        alert(arr.reverse())
+    }
+
+    function bai5() {
+        let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
+        let arr = Array(n);
+        InputArray(arr, n);
+        let count = 0;
+        for (let i = 0; i < n; i++) {
+            if (arr[i] < 0) {
+                count++;
+            }
+        }
+        alert("Có tất cả " + count + " số nguyên âm trong mảng.");
+    }
+
+    function bai6() {
+        let n = 10;
+        let arr = Array();
+        InputArray(arr, n);
+        let value = parseFloat(prompt("Nhập V:"));
+        let check;
+        for (let i = 0; i < n; i++) {
+            if (value === arr[i]) {
+                check = true;
+            }
+        }
+        if (check) {
+            alert("V is in the array");
+        } else {
+            alert("V is not in the array");
         }
     }
-    alert(max);
-}
-function bai2() {
-    let arr=[1,2,3,4,5,6,7,8,9,10];
-    let max=arr[0];
-    let j;
-    for(let i=1;i<10;i++){
-        if (max<arr[i]) {
-            max= arr[i];
-            j=i;
+
+    function bai7() {
+        let n = 10;
+        let arr = Array();
+        InputArray(arr, n);
+        let value = parseFloat(prompt("Nhập V:"));
+        let check;
+        let j;
+        let count = 0;
+        let k = 0;
+        while (k <= count) {
+            for (let i = 0; i < n; i++) {
+                if (value === arr[i]) {
+                    check = true;
+                    count++;
+                    for (j = i; j < n - 1; j++) {
+                        arr[j] = arr[j + 1];
+                    }
+                    arr[j] = 0;
+                }
+            }
+            k++;
+        }
+        if (check) {
+            alert("V is in the array. Delete V in the array");
+            alert(arr);
+        } else {
+            alert("V is not in the array");
         }
     }
-    alert("Gia tri "+max+" o vi tri "+ (j+1));
-}
-function bai3() {
 
-}
-function bai4() {
+    function bai8() {
+        let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
+        let arr = Array(n);
+        InputArray(arr, n);
+        arr.sort((function (a, b) {
+            return b - a;
+        }));
+        alert(arr);
+    }
 
-}
-function bai5() {
+    function bai9() {
+        let n = 10;
+        let arr1 = Array(n);
+        let arr2= Array(n);
+        let arr3 = Array();
+        alert("Nhập giá trị mảng 1:");
+        InputArray(arr1, n);
+        alert("Nhập giá trị mảng 2:");
+        InputArray(arr2, n);
+        arr3=arr3.concat(arr1, arr2);
+        alert(arr3);
+    }
 
-}
-function bai6() {
-
-}
-function bai7() {
-
-}
-function bai8() {
-
-}
-function bai9() {
-
-}
+    function InputArray(array, n) {
+        for (let i = 0; i < n; i++) {
+            array[i] = parseFloat(prompt("Nhập giá trị thứ " + (i + 1)));
+        }
+    }
 
 </script>
