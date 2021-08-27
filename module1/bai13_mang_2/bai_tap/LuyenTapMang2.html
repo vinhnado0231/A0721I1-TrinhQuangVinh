@@ -29,5 +29,102 @@ _ )
 </body>
 </html>
 <script>
+    function bai1() {
+        let array = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12],
+            [13, 14, 15, 16],
+            [17, 18, 19, 20]
+        ];
+        for (let i in array) {
+            document.write("row " + i + "<br>");
+            for (let j in array[i]) {
+                document.write(" " + array[i][j] + "<br>");
+            }
+        }
+    }
 
+    function bai2() {
+        let string = prompt("Nhập chuỗi cần đảo ngược:");
+        let arr = Array();
+        for (let i = 0; i < string.length; i++) {
+            arr.push(string[i]);
+        }
+        let result = arr.reverse();
+        alert(result.join(""));
+    }
+
+    function bai3() {
+        let string = prompt("Nhập mảng kí tự:");
+        let arr = Array();
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+            arr.push(string[i]);
+        }
+        for (let i in arr) {
+            if (48 <= arr[i].charCodeAt(0) && arr[i].charCodeAt(0) <= 57) {
+                count++;
+            }
+        }
+        alert("Số kí tự số trong mảng là: " + count);
+    }
+
+    function bai4() {
+        let string = prompt("Nhập chuỗi:");
+        let arr = Array();
+        let count = 1;
+        for (let i = 0; i < string.length; i++) {
+            arr.push(string[i]);
+        }
+        for (let i in arr) {
+            if (arr[i].charCodeAt(0) === 32) {
+                count++;
+            }
+        }
+        alert("Số từ trong chuỗi là: " + count);
+    }
+
+    function bai5() {
+        let string1 = prompt("Nhập chuỗi 1:");
+        let string2 = prompt("Nhập chuỗi 2:");
+        let arr1 = Array();
+        let arr2 = Array();
+        let check = true;
+        for (let i = 0; i < string1.length; i++) {
+            arr1.push(string1[i]);
+        }
+        for (let i = 0; i < string2.length; i++) {
+            arr2.push(string2[i]);
+        }
+        if (string1.length === string2.length) {
+            for(let i in arr1){
+                if(arr1[i].charCodeAt(0)===arr2[i].charCodeAt(0)){
+                    continue;
+                }
+                check=false;
+            }
+        } else {
+            alert("2 chuỗi khác nhau.");
+            check= false;
+        }
+        if(check){
+            alert("2 chuỗi giống nhau");
+        }
+    }
+
+    function bai6() {
+        let string = prompt("Nhập chuỗi:");
+        let arr = Array();
+        for (let i = 0; i < string.length; i++) {
+            arr.push(string[i]);
+        }
+        for (let i in arr) {
+            if (arr[i] === '-') {
+                arr[i]='_';
+            }
+        }
+        arr=arr.join("");
+        alert(arr);
+    }
 </script>
