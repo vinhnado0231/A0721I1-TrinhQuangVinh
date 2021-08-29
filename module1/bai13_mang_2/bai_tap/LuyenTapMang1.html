@@ -46,7 +46,7 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
     function bai1() {
         let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
         let arr = Array(n);
-        InputArray(arr, n);
+        inputArray(arr, n);
         let count = 0;
         for (let i = 0; i < n; i++) {
             if (arr[i] >= 10) {
@@ -59,7 +59,7 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
     function bai2() {
         let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
         let arr = Array(n);
-        InputArray(arr, n);
+        inputArray(arr, n);
         let max = arr[0];
         let j;
         for (let i = 1; i < n; i++) {
@@ -74,7 +74,7 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
     function bai3() {
         let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
         let arr = Array(n);
-        InputArray(arr, n);
+        inputArray(arr, n);
         let max = arr[0];
         let avg = arr[0];
         for (let i = 1; i < n; i++) {
@@ -91,14 +91,14 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
     function bai4() {
         let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
         let arr = Array(n);
-        InputArray(arr, n);
+        inputArray(arr, n);
         alert(arr.reverse())
     }
 
     function bai5() {
         let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
         let arr = Array(n);
-        InputArray(arr, n);
+        inputArray(arr, n);
         let count = 0;
         for (let i = 0; i < n; i++) {
             if (arr[i] < 0) {
@@ -111,7 +111,7 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
     function bai6() {
         let n = 10;
         let arr = Array();
-        InputArray(arr, n);
+        inputArray(arr, n);
         let value = parseFloat(prompt("Nhập V:"));
         let check;
         for (let i = 0; i < n; i++) {
@@ -129,7 +129,7 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
     function bai7() {
         let n = 10;
         let arr = Array();
-        InputArray(arr, n);
+        inputArray(arr, n);
         let value = parseFloat(prompt("Nhập V:"));
         let check;
         let j;
@@ -159,7 +159,7 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
     function bai8() {
         let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
         let arr = Array(n);
-        InputArray(arr, n);
+        inputArray(arr, n);
         arr.sort((function (a, b) {
             return b - a;
         }));
@@ -172,14 +172,14 @@ báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần t�
         let arr2= Array(n);
         let arr3 = Array();
         alert("Nhập giá trị mảng 1:");
-        InputArray(arr1, n);
+        inputArray(arr1, n);
         alert("Nhập giá trị mảng 2:");
-        InputArray(arr2, n);
+        inputArray(arr2, n);
         arr3=arr3.concat(arr1, arr2);
         alert(arr3);
     }
 
-    function InputArray(array, n) {
+    function inputArray(array, n) {
         for (let i = 0; i < n; i++) {
             array[i] = parseFloat(prompt("Nhập giá trị thứ " + (i + 1)));
         }
