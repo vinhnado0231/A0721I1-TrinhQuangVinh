@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = parseFloat(prompt("Nhập vào số thứ nhất"));
+    let num2 = parseFloat(prompt("Nhập vào số thứ hai"));
+    swap(num1, num2);
+    alert("Sau khi hoán đổi thì số thứ nhất là " + num1 + ", số thứ hai là " + num2);
+
+    function swap() {
+        let num = num1;
+        num1 = num2;
+        num2 = num;
+    }
+</script>
+</body>
+</html>

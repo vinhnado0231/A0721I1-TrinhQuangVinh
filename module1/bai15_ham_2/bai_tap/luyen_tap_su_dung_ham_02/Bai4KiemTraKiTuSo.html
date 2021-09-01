@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = prompt("Nhập kí tự cần kiểm tra: ");
+    let result = isNumber(value);
+    if (result) {
+        alert("True");
+    } else {
+        alert("False");
+    }
+
+    function isNumber(value) {
+        return value.charCodeAt(0) >= 48 && value.charCodeAt(0) <= 57;
+
+    }
+</script>
+</body>
+</html>

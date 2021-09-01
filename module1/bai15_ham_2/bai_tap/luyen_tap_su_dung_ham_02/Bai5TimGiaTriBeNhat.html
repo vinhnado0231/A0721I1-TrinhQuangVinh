@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = parseFloat(prompt("Nhập số thứ nhất: "));
+    let num2 = parseFloat(prompt("Nhập số thứ hai: "));
+    let num3 = parseFloat(prompt("Nhập số thứ ba: "));
+    let result = minNumber(num1, num2, num3)
+    alert("Số nguyên có giá trị bé nhất là: " + result);
+
+    function minNumber(n1, n2, n3) {
+        let min = n1;
+        if (min > n2) {
+            min = n2;
+        }if (min >n3){
+            min =n3;
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

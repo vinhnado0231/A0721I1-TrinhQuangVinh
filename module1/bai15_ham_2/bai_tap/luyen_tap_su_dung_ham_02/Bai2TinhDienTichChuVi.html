@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let r = parseFloat(prompt("Nhập bán kính hình tròn:"));
+    alert("Diện tích hình tròn " + area(r));
+    alert("Chu vi hình tròn: " + perimeter(r));
+
+    function area(r) {
+        return Math.pow(r, 2) * 3.14;
+    }
+
+    function perimeter(r) {
+        return r * 2 * 3.14;
+    }
+</script>
+</body>
+</html>

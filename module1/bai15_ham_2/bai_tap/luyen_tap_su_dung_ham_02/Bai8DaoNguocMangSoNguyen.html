@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập số phần tử trong mảng:"));
+    let arr = Array(n);
+    inputArray(arr, n);
+    reverseArray(arr);
+    alert(arr)
+
+    function inputArray(array, n) {
+        for (let i = 0; i < n; i++) {
+            array[i] = parseFloat(prompt("Nhập giá trị thứ " + (i + 1)));
+        }
+    }
+
+    function reverseArray(array) {
+        let i = 0;
+        let j = array.length - 1;
+        while (i < j) {
+            let arrayElement = array[i];
+            array[i] = array[j];
+            array[j] = arrayElement;
+            i++;
+            j--;
+        }
+    }
+</script>
+</body>
+</html>
