@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star = ["Polaris", "Aldebaran", " Deneb", "Vega", " Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let result = show();
+    alert(result);
+
+    function show() {
+        let name = prompt("Nhập tên ngôi sao :");
+        let result = "Ngôi sao này không tồn tại";
+        for (let i = 0; i < 7; i++) {
+            if (name === star[i]) {
+                result = constellation[i];
+                break;
+            }
+        }
+        return result;
+    }
+</script>
+</body>
+</html>
