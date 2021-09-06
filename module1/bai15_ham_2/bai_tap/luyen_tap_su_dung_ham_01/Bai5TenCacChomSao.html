@@ -8,11 +8,11 @@
 <script>
     let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
     let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
-    let result = findStar();
+    let name = prompt("Nhập tên ngôi sao :");
+    let result = findStar(name);
     alert(result);
 
-    function findStar() {
-        let name = prompt("Nhập tên ngôi sao :");
+    function findStar(name) {
         let result = "Ngôi sao này không tồn tại";
         for (let i = 0; i < 7; i++) {
             if (name === star[i]) {
