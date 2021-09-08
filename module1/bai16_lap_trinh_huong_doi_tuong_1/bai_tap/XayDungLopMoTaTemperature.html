@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(tempC) {
+            this.tempC = tempC;
+        }
+
+        getTempFaraday() {
+            return 9 / 5 * tempC + 32;
+        }
+
+        getTempKevin() {
+            return tempC + 273.15;
+        }
+    }
+
+    let tempC =25;
+    let temperature = new Temperature(tempC);
+    alert("Độ F: "+ temperature.getTempFaraday()+" ,độ K: "+temperature.getTempKevin());
+</script>
+</body>
+</html>

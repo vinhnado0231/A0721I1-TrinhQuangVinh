@@ -5,68 +5,64 @@
     <title>Title</title>
 </head>
 <body>
-<input id="productName" type="text" placeholder="New product">
-<button onclick="addNewProduct()">Add New Product</button><br>
-<span>Số lượng sản phẩm :</span> <span id="total"></span>
+<h3>Add new product</h3>
+<label for="name"></label><input type="text" id="name"><input type="button" value="Add" onclick="addNewProduct()">
+<br>
+<span>The number of products: </span><span id="count"></span>
+<h3>List of Product:</h3>
 <p id="result"></p>
-<script>
-    let productList=["Sam Sung","Nokia","Iphone","HTC"];
-    display();
-    function addNewProduct() {
-        let newProduct = document.getElementById("productName").value;
-        if (newProduct==""){
-            alert("Bạn cần nhập tên sản phầm");
-        }else {
-            productList.push(newProduct);
-            document.getElementById("productName").value="";
-        }
-        display();
-
-    }
-    function display() {
-        let tableString ='<table border="1">\n' +
-            '    <tr>\n' +
-            '        <th>STT</th>\n' +
-            '        <th>Name</th>\n' +
-            '        <th>Edit</th>\n' +
-            '        <th>Delete</th>\n' +
-            '    </tr>';
-        for (let i =0;i<productList.length;i++){
-            tableString+='<tr>\n' +
-                '        <td>'+(i+1)+'</td>\n' +
-                '        <td>'+productList[i]+'</td>\n' +
-                '        <td><input type="button" value="Edit" onclick="editProduct('+i+')"></td>\n' +
-                '        <td><input type="button" value="Delete"onclick="deleteProduct('+i+')"></td>\n' +
-                '    </tr>';
-        }
-        tableString+='</table>';
-        document.getElementById("result").innerHTML=tableString;
-        document.getElementById("total").innerHTML=productList.length;
-
-    }
-    function editProduct(id) {
-        let editProduct = prompt("Nhập tến sản phẩm mới");
-        if (editProduct==""){
-            alert("Làm ơn nhập tến sản phẩm")
-        }else if (editProduct==null){
-            alert("Bạn không muốn sửa tên")
-        }else {
-            productList[id]=editProduct;
-        }
-
-        display();
-
-    }
-    function deleteProduct(id) {
-        let conf= confirm("Bạn có muốn xóa sản phẩm: "+ productList[id]);
-        if (conf){
-            productList.splice(id,1);
-            alert("Bạn đã xóa thành công")
-        }else {
-            alert("Bạn không xóa sản phẩm")
-        }
-        display();
-    }
-</script>
 </body>
 </html>
+<script>
+    let product = ["Samsung", "Apple", "Nokia", "Xiaomi"];
+    display()
+
+    function display() {
+        let table = `<table border="1"><tr> <th>STT</th><th>Product Name</th><th>Edit</th><th>Delete</th></tr>`;
+
+        for (let i = 0; i < product.length; i++) {
+            table +=
+                '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + product[i] + '</td>' +
+                '<td><input type="button" value="Edit" onclick="edit(' + i + ')"></td>' +
+                '<td><input type="button" value="Delete" onclick="remove(' + i + ')"></td>' +
+                '</tr>';
+        }
+        table += '</table>';
+        document.getElementById("result").innerHTML = table;
+        document.getElementById("count").innerHTML = product.length;
+    }
+
+    function edit(i) {
+        let editProduct = prompt("Nhập tên sản phẩm cần sửa: ");
+        if (editProduct === "") {
+            alert("Vui lòng nhập tến sản phẩm cần sửa: ");
+        } else if (editProduct == null) {
+            alert("Bạn không muốn sửa tên");
+        } else {
+            product[i] = editProduct;
+        }
+        display();
+    }
+
+    function remove(i) {
+        let confirmDelete = confirm('Bạn có chắc muốn xoá sản phẩm này không? ');
+        if (confirmDelete) {
+            product.splice(i, 1);
+            alert('Bạn đã xoá thành công');
+        }
+        display()
+    }
+
+    function addNewProduct() {
+        let newProduct = document.getElementById("name").value;
+        if (newProduct !== "") {
+            product.push(newProduct);
+            document.getElementById("name").value = "";
+        }else{
+            alert("Bạn vui lòng nhập sản phẩm trước khi thêm vào");
+        }
+        display()
+    }
+</script>

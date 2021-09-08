@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle{
+        constructor(width,height) {
+            this.width=width;
+            this.height=height;
+        }
+        getArea = function () {
+            return this.height * this.width;
+        }
+        getPerimeter=function () {
+            return (this.height + this.width) * 2;
+        }
+    }
+    let width=parseFloat(prompt("Nhập chiều dài:"));
+    let height=parseFloat(prompt("Nhập chiều rộng: "));
+    let rectangle = new Rectangle(width,height);
+
+    let area= rectangle.getArea();
+    let perimeter=rectangle.getPerimeter();
+    alert("Hình chữ nhật có diện tích: "+ area + " ; chu vi: "+ perimeter ".");
+</script>
+</body>
+</html>
