@@ -9,7 +9,6 @@
     class Switch {
         constructor(status) {
             this.status = status;
-
         }
 
         switchButton = function () {
@@ -33,15 +32,13 @@
             }
         }
         setStatus = function (status) {
-            this.status = status;
+            this.status = status.status;
         }
     }
 
     let lamp1 = new ElectricLamp();
     let switch1 = new Switch(false);
-    // lamp1.setStatus(switch1);
-
-
+    lamp1.setStatus(switch1);
     let count = 0;
     while (count < 10) {
         console.log(count + 1);
@@ -50,8 +47,6 @@
         lamp1.checkLight();
         count++;
     }
-
-
 </script>
 </body>
 </html>

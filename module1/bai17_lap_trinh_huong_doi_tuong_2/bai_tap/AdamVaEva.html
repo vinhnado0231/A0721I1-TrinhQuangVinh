@@ -6,76 +6,89 @@
 </head>
 <body>
 <script>
-    class Apple{
+    class Apple {
         constructor() {
-            this.weight=10;
+            this.weight = 10;
         }
-        decrease(){
+
+        decrease() {
             this.weight--;
         }
-        isEmpty(){
-            if (this.weight==0){
+
+        isEmpty() {
+            if (this.weight == 0) {
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
-        getWeight(){
+
+        getWeight() {
             return this.weight;
         }
     }
-    class Human{
-        constructor(name,gender,weight) {
-            this.name=name;
-            this.gender =gender;
-            this.weight=weight;
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
         }
-        isMale(){
-            if (this.gender){
+
+        isMale() {
+            if (this.gender) {
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
-        setGender(gender){
-            this.gender=gender;
+
+        setGender(gender) {
+            this.gender = gender;
         }
-        setName(name){
-            this.name=name;
+
+        setName(name) {
+            this.name = name;
         }
-        setWeight(weight){
-            this.weight=weight;
+
+        setWeight(weight) {
+            this.weight = weight;
         }
-        getName(){
+
+        getName() {
             return this.name
         }
-        getWeight(){
+
+        getWeight() {
             return this.weight;
         }
-        checkApple(apple){
-            if (apple.isEmpty()){
+
+        checkApple(apple) {
+            if (apple.isEmpty()) {
                 alert("Táo đã hết");
                 return false;
-            }else {
+            } else {
                 alert("Táo còn");
-                return  true;
+                return true;
             }
         }
-        eatApple(apple){
-            if (this.checkApple(apple)){
+
+        eatApple(apple) {
+            if (this.checkApple(apple)) {
                 this.weight++;
                 apple.decrease();
             }
 
         }
-        say(message){
-            console.log(this.getName()+":"+message)
+
+        say(message) {
+            console.log(this.getName() + ":" + message)
         }
     }
 
     let tao = new Apple();
-    let adam = new Human("Adam",true,50);
-    let eva = new Human("EVa",false,40);
+    let adam = new Human("Adam", true, 50);
+    let eva = new Human("EVa", false, 40);
     adam.say("em ăn táo đi");
     eva.say("em ăn trước nhé");
     eva.eatApple(tao);
