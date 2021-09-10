@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Switch {
+        constructor(status) {
+            this.status = status;
+
+        }
+
+        switchButton = function () {
+            this.status = !this.status;
+        }
+        checkStatus = function () {
+            return this.status;
+        }
+    }
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        checkLight = function () {
+            if (this.status) {
+                console.log("Lighting");
+            } else {
+                console.log("Not lighting");
+            }
+        }
+        setStatus = function (status) {
+            this.status = status;
+        }
+    }
+
+    let lamp1 = new ElectricLamp();
+    let switch1 = new Switch(false);
+    // lamp1.setStatus(switch1);
+
+
+    let count = 0;
+    while (count < 10) {
+        console.log(count + 1);
+        switch1.switchButton();
+        lamp1.status = switch1.checkStatus();
+        lamp1.checkLight();
+        count++;
+    }
+
+
+</script>
+</body>
+</html>

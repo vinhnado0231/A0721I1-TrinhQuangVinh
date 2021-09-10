@@ -34,9 +34,9 @@
 
         this.light = function () {
             if (this.status) {
-                alert("Lighting");
+                console.log("Lighting");
             } else {
-                alert("Not lighting");
+                console.log("Not lighting");
             }
         };
 
@@ -60,11 +60,20 @@
     document.write("Turn on<br/>")
     flashLamp.turnOn();
     flashLamp.light();
+    battery.decreaseEnergy();
     document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
 
     document.write("Turn off<br/>")
     flashLamp.turnOff();
     flashLamp.light();
+    battery.decreaseEnergy();
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+    document.write("Turn on<br/>")
+    flashLamp.turnOn();
+    flashLamp.light();
+    battery.decreaseEnergy();
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
 </script>
 </body>
 </html>
