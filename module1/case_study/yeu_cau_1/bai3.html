@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let height = parseFloat(prompt("Nhập chiều cao: "));
+    let width;
+    if (height === 2) {
+        width = 3;
+    } else {
+        width = height * 2 - 1;
+    }
+    let count1 = height;
+    let count2 = height;
+    for (let i = 1; i <= height; i++) {
+        for (let j = 1; j <= width; j++) {
+            if (count2 >= j && count1 <= j) {
+                document.write("*");
+            } else {
+                document.write("&nbsp;&nbsp;");
+            }
+        }
+        count1--;
+        count2++;
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>

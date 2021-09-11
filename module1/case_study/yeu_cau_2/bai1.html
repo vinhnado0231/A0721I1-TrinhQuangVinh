@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ThuNhap = parseFloat(prompt("Tiền thu nhập hằng tháng của bạn: (triệu)"));
+    let thue;
+    if (ThuNhap <= 7) {
+        thue = ThuNhap * 5 / 100;
+    } else if (ThuNhap <= 15) {
+        thue = ThuNhap * 10 / 100;
+    } else {
+        thue = ThuNhap * 20 / 100;
+    }
+    alert("Thuế thu nhâp của bạn là: " + thue * Math.pow(10, 6) + " vnd");
+</script>
+</body>
+</html>
