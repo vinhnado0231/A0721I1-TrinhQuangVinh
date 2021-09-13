@@ -5,26 +5,52 @@
     <title>Title</title>
 </head>
 <body>
+<label for="length">Length: </label><input type="text" id="length">
+<br>
+<label for="width">Width: </label><input type="text" id="width">
+<br>
+<input type="button" value="Caculator" onclick="getInput()">
+<br>
+<text id="result"></text>
+<br>
+<canvas id="canvas" width="1600" height="900"></canvas>
+</body>
 <script>
-    class Rectangle{
-        constructor(width,height) {
-            this.width=width;
-            this.height=height;
+    class Rectangle {
+        constructor(length, width) {
+            this.length = Number(length);
+            this.width = Number(width);
         }
-        getArea = function () {
-            return this.height * this.width;
+
+        area() {
+            return (this.length * this.width);
         }
-        getPerimeter=function () {
-            return (this.height + this.width) * 2;
+
+        perimeter() {
+            return ((this.length + this.width) * 2);
+        }
+
+        draw() {
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'red';
+            ctx.fillRect(0, 0, this.length, this.width);
+        }
+
+    }
+
+    function getInput() {
+        let length = document.getElementById('length').value
+        let width = document.getElementById('width').value
+        if (!(length > 0 && width > 0)) {
+            document.getElementById('result').innerHTML = 'Input Error';
+        } else {
+            let result;
+            let rectangle = new Rectangle(length, width);
+            result = `Perimeter = ${rectangle.perimeter()} Area = ${rectangle.area()}`;
+            document.getElementById('result').innerHTML = result;
+            rectangle.draw()
         }
     }
-    let width=parseFloat(prompt("Nhập chiều dài:"));
-    let height=parseFloat(prompt("Nhập chiều rộng: "));
-    let rectangle = new Rectangle(width,height);
-
-    let area= rectangle.getArea();
-    let perimeter=rectangle.getPerimeter();
-    alert("Hình chữ nhật có diện tích: "+ area + " ; chu vi: "+ perimeter ".");
 </script>
-</body>
 </html>
