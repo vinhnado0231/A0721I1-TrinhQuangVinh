@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập số các phân số: "));
+    let numerators = new Array(n);
+    alert("Nhập tử số");
+    inputArray(numerators, n);
+    let denominators = new Array(n);
+    alert("Nhập mẫu số");
+    inputArray(denominators, n);
+    let j = 0;
+    let max = numerators[j] / denominators[j];
+    for (let i = 1; i < numerators.length; i++) {
+        if (max < numerators[i] / denominators[i]) {
+            max = numerators[i] / denominators[i];
+            j = i;
+        }
+    }
+    alert(numerators[j] + '/' + denominators[j] + ' là phân số lớn nhất, có chỉ số là ' + j);
+
+    function inputArray(array, n) {
+        for (let i = 0; i < n; i++) {
+            array[i] = parseFloat(prompt("Nhập giá trị thứ " + (i + 1)));
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let columns = parseInt(prompt("Nhập số hàng"));
+    let rows = parseInt(prompt("Nhập số cột"));
+    let array = [rows];
+    for (let i = 0; i < columns; i++) {
+        array[i] = [];
+    }
+    let min, max;
+    for (let i = 0; i < columns; i++) {
+        for (let j = 0; j < rows; j++) {
+            array[i][j] = parseInt(prompt("Nhập giá trị thứ [" + i + "][" + j + "]: "));
+            if (i === 0 && j === 0)
+            {
+                min = array[i][j];
+                max = array[i][j];
+            }
+            if (max < array[i][j]) {
+                max = array[i][j];
+            }
+            if (min > array[i][j]) {
+                min = array[i][j];
+            }
+        }
+    }
+    document.write("Trong mảng có max= " + max + " ,min=" + min);
+</script>
+</body>
+</html>

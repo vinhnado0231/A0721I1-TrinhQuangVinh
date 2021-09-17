@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let columns = parseInt(prompt("Nhập số hàng"));
+    let rows = parseInt(prompt("Nhập số cột"));
+    let array = [rows];
+    for (let i = 0; i < columns; i++) {
+        array[i] = [];
+    }
+    let sum = 0;
+    for (let i = 0; i < columns; i++) {
+        for (let j = 0; j < rows; j++) {
+            array[i][j] = parseInt(prompt("Nhập giá trị thứ [" + i + "][" + j + "]: "));
+            if (array[i][j] % 2 === 0) {
+                sum += array[i][j];
+            }
+        }
+    }
+    alert("Tổng các số chẵn trong ma trận: " + sum);
+</script>
+</body>
+</html>

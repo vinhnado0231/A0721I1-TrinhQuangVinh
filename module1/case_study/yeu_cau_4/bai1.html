@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("Enter string", "Enter");
+    let array = [];
+    array[0] = ' ';
+    for (let i = 0; i < string.length; i++) {
+        array.push(string[i]);
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].charCodeAt(0) === 32) {
+            i++;
+            while (1) {
+                if (array[i].charCodeAt(0) === 32) {
+                    array.splice(i, 1);
+                } else {
+                    break;
+                }
+            }
+            array[i] = array[i].toUpperCase();
+            continue;
+        }
+        array[i] = array[i].toLowerCase();
+    }
+    document.write("Trước khi chuẩn hoá: " + string + "<br>");
+    array = array.join('');
+    console.log(array);
+    document.write("Sau khi chuẩn hoá: " + array + "<br>");
+    document.write("Từ dài nhất: " + longestWord(string));
+
+    function longestWord(string) {
+        let str = string.split(" ");
+        let longest = 0;
+        let word;
+        for (let i = 0; i < str.length; i++) {
+            if (longest < str[i].length) {
+                longest = str[i].length;
+                word = str[i];
+            }
+        }
+        return word;
+    }
+</script>
+</body>
+</html>

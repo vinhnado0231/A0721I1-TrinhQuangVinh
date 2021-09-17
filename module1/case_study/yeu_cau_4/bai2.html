@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function differentSymbolsNaive(s) {
+        return s.split('').filter((el,i,self)=>i===self.indexOf(el)).length
+    }
+    let string = prompt("Enter string","Enter");
+    alert(differentSymbolsNaive(string));
+</script>
+</body>
+</html>

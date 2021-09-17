@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<ol>
+    <li>Cafe</li>
+    <li>Cam vắt</li>
+    <li>Nước ép cà rốt</li>
+    <li>Nước ép cà chua</li>
+    <li>Nước lọc</li>
+    <li>Nước dừa</li>
+    <li>Thoát menu</li>
+</ol>
+<button onclick="buyMenu()">Buy</button>
+<p id="receipt"></p>
+<p id="total"></p>
+<script>
+    let price = [10000, 15000, 15000, 12000, 5000, 18000];
+    let amount;
+    let total = 0;
+    let loop = true;
+
+    function buyMenu() {
+        while (loop) {
+            let choice = parseInt(prompt("Hãy nhập lựa chọn của bạn theo menu: "));
+            switch (choice) {
+                case  1:
+                    alert("Cafe có giá: " + price[0]);
+                    amount = parseInt(prompt("Bạn muốn mua số lượng bao nhiêu?"));
+                    total += amount * price[0];
+                    document.getElementById("receipt").innerHTML += "<br> Cà phê ..........." + " số lượng: " + amount;
+                    break;
+                case 2:
+
+                    alert("Cam vắt có giá: " + price[1]);
+                    amount = parseInt(prompt("Bạn muốn mua số lượng bao nhiêu?"));
+                    total += amount * price[1];
+                    document.getElementById("receipt").innerHTML += "<br> Cam vắt ..........." + " số lượng: " + amount;
+                    break;
+                case 3:
+
+                    alert("Nước ép cà rốt có giá: " + price[2]);
+                    amount = parseInt(prompt("Bạn muốn mua số lượng bao nhiêu?"));
+                    total += amount * price[2];
+                    document.getElementById("receipt").innerHTML += "<br> Nước ép cà rốt ......" + " số lượng: " + amount;
+                    break;
+                case 4:
+
+                    alert("nước ép cà chua này có giá: " + price[3]);
+                    amount = parseInt(prompt("Bạn muốn mua số lượng bao nhiêu?"));
+                    total += amount * price[3];
+                    document.getElementById("receipt").innerHTML += "<br> Nước ép cà chua ......" + " số lượng: " + amount;
+                    break;
+                case 5:
+                    alert("Nước lọc có giá: " + price[4]);
+                    amount = parseInt(prompt("Bạn muốn mua số lượng bao nhiêu?"));
+                    total += amount * price[4];
+                    document.getElementById("receipt").innerHTML += "<br> Nước lọc .............." + " số lượng: " + amount;
+                    break;
+                case 6:
+
+                    alert("Sản phẩm này có giá: " + price[5]);
+                    amount = parseInt(prompt("Bạn muốn mua số lượng bao nhiêu?"));
+                    total += amount * price[5];
+                    document.getElementById("receipt").innerHTML += "<br> Nước dừa .............." + " số lượng: " + amount;
+                    break;
+                case 7:
+                    loop = false;
+                    break;
+                default:
+                    alert("Bạn đã nhập sai, vui lòng nhập lại: ");
+                    continue;
+            }
+            document.getElementById("total").innerHTML = "<br> Tổng đơn giá: " + total;
+        }
+    }
+</script>
+</body>
+</html>

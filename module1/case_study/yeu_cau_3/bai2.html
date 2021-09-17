@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Title</title>
 </head>
 <body>
 <script>
+    let n1 = parseInt(prompt("Nhập số phần tử trong mảng A: "));
+    let arrayA = new Array(n1);
+    inputArray(arrayA, n1);
+    let n2 = parseInt(prompt("Nhập số phần tử trong mảng B: "));
+    let arrayB = new Array(n2);
+    inputArray(arrayB, n2);
+    let result = arrayB.filter(x => !arrayA.includes(x));
+    alert(result);
+
     function inputArray(array, n) {
         for (let i = 0; i < n; i++) {
             array[i] = parseFloat(prompt("Nhập giá trị thứ " + (i + 1)));
         }
     }
-    let n1=parseInt(prompt("Nhập số phần tử trong mảng A: "));
-    let arrayA=new Array(n1);
-    inputArray(arrayA,n1);
-    let n1=parseInt(prompt("Nhập số phần tử trong mảng B: "));
-    let arrayA=new Array(n2);
-    inputArray(arrayB,n1);
 </script>
 </body>
 </html>
