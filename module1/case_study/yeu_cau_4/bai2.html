@@ -6,11 +6,34 @@
 </head>
 <body>
 <script>
-    function differentSymbolsNaive(s) {
-        return s.split('').filter((el,i,self)=>i===self.indexOf(el)).length
+    // function differentSymbolsNaive(s) {
+    //     return s.split('').filter((el,i,self)=>i===self.indexOf(el)).length
+    // }
+    // let string = prompt("Enter string","Enter");
+    // alert(differentSymbolsNaive(string));
+
+    let string = prompt("Nhập một chuỗi");
+    let result = [];
+    let check = true;
+
+    function differentSymbolsNaive(string) {
+        result.push(string[0]);
+        for (let i = 1; i < string.length; i++) {
+            for (let j = 0; j <= i; j++) {
+                if (string[i] === result[j]) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check) {
+                result.push(string[i]);
+            }
+            check = true;
+        }
+        return result.length;
     }
-    let string = prompt("Enter string","Enter");
-    alert(differentSymbolsNaive(string));
+
+    alert("Số kí tự khác nhau trong chuỗi là " + differentSymbolsNaive(string));
 </script>
 </body>
 </html>

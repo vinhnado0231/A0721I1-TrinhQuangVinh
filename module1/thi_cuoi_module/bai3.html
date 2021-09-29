@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Quản lí sách</h3>
+<p id="result"></p>
+<input type="button" value="Thêm sách đã có" onclick="addQuantityBook()">
+<input type="button" value="Thêm sách mới" onclick="addNewBook()">
+<input type="button" value="Mượn sách" onclick="borrow()">
+<input type="button" value="Hiển thị sách nhiều nhất" onclick="mostOfBook()">
+<script>
+    class Book {
+        constructor(id, bookTitle, publishYear, quantity, status) {
+            this.id = id;
+            this.bookTitle = bookTitle;
+            this.publishYear = publishYear;
+            this.quantity = quantity;
+            this.status = status;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getBookTitle() {
+            return this.bookTitle;
+        }
+
+        getPublishYear() {
+            return this.publishYear;
+        }
+
+        getQuantity() {
+            return this.quantity;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setBookTitle(bookTitle) {
+            this.bookTitle = bookTitle;
+        }
+
+        setPublishYear(publishYear) {
+            this.publishYear = publishYear;
+        }
+
+        setQuantity(quantity) {
+            this.quantity = quantity;
+            this.checkStatus()
+        }
+
+        borrowBook(numBorrow) {
+            if (this.quantity < numBorrow) {
+                alert("Bạn đã mượn quá số lượng trong kho sách có, vui lòng nhập lại");
+            } else {
+                this.quantity -= numBorrow;
+                this.checkStatus();
+            }
+        }
+
+        checkStatus() {
+            this.status = this.quantity > 0;
+        }
+    }
+
+    let book1 = new Book(12345, "Toán", 2000, 3, true);
+    let book2 = new Book(23456, "Văn", 1998, 4, true);
+    let book3 = new Book(34567, "Tiếng anh", 1999, 5, true);
+
+    let bookManage = [];
+    bookManage.push(book1, book2, book3);
+    display();
+
+    function display() {
+        let table = '<table border="1px"> <tr> <th>Mã số sách</th> <th>Tên sách</th> <th>Năm xuất bản</th> <th>Số quyển</th> <th>Tình trạng</th></tr>';
+        for (let i = 0; i < bookManage.length; i++) {
+            table += '<tr>' +
+                '<td>' + bookManage[i].getId() + '</td>' +
+                '<td>' + bookManage[i].getBookTitle() + '</td>' +
+                '<td>' + bookManage[i].getPublishYear() + '</td>' +
+                '<td>' + bookManage[i].getQuantity() + '</td>' +
+                '<td>' + bookManage[i].getStatus() + '</td>' +
+                '</tr>';
+        }
+        table += '</table>';
+        document.getElementById("result").innerHTML = table;
+    }
+
+    function addNewBook() {
+        let id;
+        do {
+            id = prompt("Nhập id sách:");
+        } while (id.length !== 5 &&( id[0].charCodeAt(0)<49||id[0].charCodeAt(0)>53));
+        let bookTitle = prompt("Nhập tên sách: ");
+        let publicsYear;
+        do {
+            publicsYear = parseInt(prompt("Nhập năm phát hành: "));
+        } while (publicsYear > 2021);
+        let quantity = parseInt(prompt("Nhập số lượng sách: "));
+        let book = new Book();
+        book.setId(id);
+        book.setBookTitle(bookTitle);
+        book.setPublishYear(publicsYear);
+        book.setQuantity(quantity);
+        bookManage.push(book);
+        display();
+    }
+
+    function mostOfBook() {
+        let max = bookManage[0].getQuantity();
+        let location = 0;
+        for (let i = 1; i < bookManage.length; i++) {
+            if (max < bookManage[i].getQuantity()) {
+                max = bookManage[i].getQuantity();
+                location = i;
+            }
+        }
+        alert("Sách có số lượng nhiều nhất là: " + bookManage[location].getBookTitle());
+    }
+
+    function borrow() {
+        let bookTitle = prompt("Nhập tên sách cần mượn:");
+        for (let i = 0; i < bookManage.length; i++) {
+            if (bookTitle === bookManage[i].getBookTitle()) {
+                let num = parseInt(prompt("Nhập số sách cần mượn: "));
+                bookManage[i].borrowBook(num);
+                display()
+                return 0;
+            }
+        }
+        alert("Bạn vui lòng nhập đúng tên sách");
+    }
+
+    function addQuantityBook() {
+        let bookTitle = prompt("Nhập tên sách cần thêm :");
+        for (let i = 0; i < bookManage.length; i++) {
+            if (bookTitle === bookManage[i].getBookTitle()) {
+                let num = parseInt(prompt("Nhập số sách cần thêm: "));
+                bookManage[i].quantity += num;
+                display()
+                return 0;
+            }
+        }
+        alert("Bạn vui lòng nhập đúng tên sách");
+    }
+</script>
+</body>
+</html>

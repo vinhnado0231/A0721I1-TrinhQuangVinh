@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    let ThuNhap = parseFloat(prompt("Tiền thu nhập hằng tháng của bạn: (triệu)"));
+    let thuNhap = parseFloat(prompt("Tiền thu nhập hằng tháng của bạn: (triệu)"));
     let thue;
-    if (ThuNhap <= 7) {
-        thue = ThuNhap * 5 / 100;
-    } else if (ThuNhap <= 15) {
-        thue = ThuNhap * 10 / 100;
+    if (thuNhap <= 7) {
+        thue = thuNhap * 5 / 100;
+    } else if (thuNhap <= 15) {
+        thue = thuNhap * 10 / 100;
     } else {
-        thue = ThuNhap * 20 / 100;
+        thue = thuNhap * 20 / 100;
     }
     alert("Thuế thu nhâp của bạn là: " + thue * Math.pow(10, 6) + " vnd");
 </script>
