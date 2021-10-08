@@ -7,19 +7,20 @@ public class UngDungDocSoThanhChu {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Nhập số:");
         int number = scanner.nextInt();
-        String result= tranfer(number);
-        if (number> 999 || number <0) {
+        String result = tranfer(number);
+        if (number > 999 || number < 0) {
             result = "out of ability";
         }
-        System.out.printf("\nTên của số %d là: %s ",number, result);
+        System.out.printf("\nTên của số %d là: %s ", number, result);
     }
-    static String tranfer(int num){
+
+    static String tranfer(int num) {
         String result;
         int hundreds = num / 100;
         num %= 100;
         int tens = num / 10;
         num %= 10;
-        String hundred,ten,one;
+        String hundred, ten, one;
         hundred = switch (hundreds) {
             case 1 -> "one";
             case 2 -> "two";
@@ -79,9 +80,9 @@ public class UngDungDocSoThanhChu {
             result = ten + " " + one;
         } else if (tens == 0 && num == 0) {
             result = hundred + " hundred ";
-        }else{
+        } else {
             result = hundred + " hundred and " + ten + " " + one;
         }
-        return  result;
+        return result;
     }
 }
