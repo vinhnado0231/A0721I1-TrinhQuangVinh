@@ -48,7 +48,7 @@ public class QuadraticEquation {
         return (-this.b - Math.sqrt(getDiscriminant())) / 2 * this.a;
     }
 
-    public void Calculation() {
+    public void calculation() {
         if (this.a == 0) {
             System.out.println("Đây không phải phương trình bậc 2");
         } else if (getDiscriminant() == 0) {

@@ -6,6 +6,9 @@ public class StopWatch {
     private Long endTime;
     private Long elapsedTime;
 
+    public StopWatch() {
+    }
+
     public Long getStartTime() {
         return startTime;
     }

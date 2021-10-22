@@ -14,6 +14,6 @@ public class XayDungLopQuadraticEquation {
         System.out.print("c= ");
         c = input.nextDouble();
         QuadraticEquation equation = new QuadraticEquation(a, b, c);
-        equation.Calculation();
+        equation.calculation();
     }
 }
