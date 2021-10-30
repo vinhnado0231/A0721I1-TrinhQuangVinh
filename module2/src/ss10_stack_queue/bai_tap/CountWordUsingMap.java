@@ -12,23 +12,22 @@ public class CountWordUsingMap {
         System.out.println("Nhập chuỗi : ");
         String myString = input.nextLine();
         myString = myString.toLowerCase(Locale.ROOT);
-        char[] charArray = myString.toCharArray();
+        char[] Array = myString.toCharArray();
         for (int i = 0; i < myString.length(); i++) {
-            if (charArray[i] != ' ') {
-                int value = count(charArray, i);
-                myMap.put(charArray[i], value);
+            if (Array[i] != ' ') {
+                myMap.put(Array[i], countChar(Array,i));
             }
         }
         Set<Character> keys = myMap.keySet();
         for (Character key : keys) {
-            System.out.println("Key: " + key + ": " + myMap.get(key));
+            System.out.println("Kí tự: " + key + ": " + myMap.get(key));
         }
     }
 
-    public static int count(char[] arr, int index) {
+    public static int countChar(char[] array, int index) {
         int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == arr[index]) count++;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == array[index]) count++;
         }
         return count;
 
