@@ -1,7 +1,9 @@
 package ss7_abstract_class_va_interface.bai_tap.resizeable;
 
 
-public class Rectangle extends Shape implements  Resizeable {
+import ss7_abstract_class_va_interface.bai_tap.colorable.Colorable;
+
+public class Rectangle extends Shape implements  Resizeable, Colorable {
     private double width;
     private double length;
 
@@ -59,5 +61,10 @@ public class Rectangle extends Shape implements  Resizeable {
     public void resize(double percent) {
         this.width += this.width * percent / 100;
         this.length += this.length * percent / 100;
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four edges");
     }
 }

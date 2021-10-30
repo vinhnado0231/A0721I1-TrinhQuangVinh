@@ -5,17 +5,10 @@ import java.util.concurrent.TimeUnit;
 public class XayDungLopStopWatch {
     public static void main(String[] args) throws InterruptedException {
         StopWatch watch = new StopWatch();
-        startWatch(watch);
+        watch.startWatch();
         TimeUnit.SECONDS.sleep(3);
-        endWatch(watch);
+        watch.endWatch();
         watch.setElapsedTime(watch.getEndTime() - watch.getStartTime());
         System.out.println(watch.getElapsedTime());
     }
-        private static void endWatch(StopWatch watch) {
-            watch.setEndTime(System.currentTimeMillis());
-        }
-
-        public static  void startWatch(StopWatch watch) {
-            watch.setStartTime(System.currentTimeMillis());
-        }
-    }
+}
