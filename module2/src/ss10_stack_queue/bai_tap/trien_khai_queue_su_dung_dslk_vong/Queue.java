@@ -1,5 +1,7 @@
 package ss10_stack_queue.bai_tap.trien_khai_queue_su_dung_dslk_vong;
 
+///// THAM KHAO
+
 public class Queue implements Solution {
     Node front = null;
     Node rear = null;
