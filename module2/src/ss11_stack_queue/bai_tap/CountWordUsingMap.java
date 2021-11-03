@@ -1,4 +1,4 @@
-package ss10_stack_queue.bai_tap;
+package ss11_stack_queue.bai_tap;
 
 import java.util.Locale;
 import java.util.Scanner;
