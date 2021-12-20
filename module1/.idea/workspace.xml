@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1a0053-88e3-4010-8d11-203e5c572a23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../module2/src/ss1_introduction_to_java/thuc_hanh/GiaiPhuongTrinhBacNhat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module2/src/ss1_introduction_to_java/thuc_hanh/KhaiBaoVaSuDungBien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module2/src/ss1_introduction_to_java/thuc_hanh/SuDungToanTu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module2/src/ss1_introduction_to_java/thuc_hanh/SystemTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/A0721I1-TrinhQuangVinh.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module2/IntroductionToJava/thuc_hanh/SystemTime.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/ss6_css _ cascading_style_stylesheet/bai_tap/DinhDangVanBanVoiCSS.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/ss6_css _ cascading_style_stylesheet/bai_tap/DinhDangVanBanVoiCSS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/ss6_css _ cascading_style_stylesheet/bai_tap/TaoTrangDocTruyenNgan/ConVitXauXi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/ss6_css _ cascading_style_stylesheet/bai_tap/TaoTrangDocTruyenNgan/GioiThieu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/ss6_css _ cascading_style_stylesheet/bai_tap/TaoTrangDocTruyenNgan/Stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/ss6_css _ cascading_style_stylesheet/bai_tap/TaoTrangDocTruyenNgan/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study1/Task.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study1/Task.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +28,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../module3" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -48,6 +45,7 @@
       <updated>1633075927671</updated>
       <workItem from="1633075928811" duration="25000" />
       <workItem from="1633080333397" duration="54000" />
+      <workItem from="1640000036668" duration="17000" />
     </task>
     <servers />
   </component>
