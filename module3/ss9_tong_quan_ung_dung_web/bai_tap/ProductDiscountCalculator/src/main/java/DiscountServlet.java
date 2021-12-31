@@ -20,7 +20,6 @@ public class DiscountServlet extends HttpServlet {
         writer.println("<h4>Discount Amount:" +discountAmount+"<h4>");
         writer.println("<h4>Discount Price:" +discountPrice+"<h4>");
         writer.println("</html>");
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
