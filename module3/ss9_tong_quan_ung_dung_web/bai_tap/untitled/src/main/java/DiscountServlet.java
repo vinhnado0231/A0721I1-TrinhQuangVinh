@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "CalculateDiscountServlet", value = "/discount")
+@WebServlet(name = "DiscountServlet", value = "/discount")
 public class DiscountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String productDescription = request.getParameter("productDescription");
