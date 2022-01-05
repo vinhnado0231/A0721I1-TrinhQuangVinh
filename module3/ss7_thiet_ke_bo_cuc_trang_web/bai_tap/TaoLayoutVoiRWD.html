@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .col-1 {
+            width: 8.33%
+        }
+
+        .col-2 {
+            width: 16.66%
+        }
+
+        .col-3 {
+            width: 25%
+        }
+
+        .col-4 {
+            width: 33.3%
+        }
+
+        .col-5 {
+            width: 41.66%
+        }
+
+        .col-6 {
+            width: 50%
+        }
+
+        .col-7 {
+            width: 58.33%
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75px;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 0px 5px 0px 5px;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        header ul, header li {
+            padding: 0;
+            margin: 0;
+        }
+
+        #header {
+            padding: 20px 20px 20px 0px;
+            margin: 5px 5px 0px 5px;
+            background-color: #161605;
+            color: white;
+        }
+
+        #header ul li {
+            display: inline;
+            padding: 10px;
+
+        }
+
+        #header li a {
+            text-decoration: none;
+            text-align: center;
+            color: gray;
+            padding: 20px 10px 20px 0px;
+            font-size: 20px;
+
+        }
+
+        #header li a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        h2 {
+            font-size: 50px;
+            margin: 10px;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        hr {
+            margin: 10px;
+        }
+
+        .left {
+            text-align: center;
+            background-color: #CDCDCD;
+            height: 600px;
+        }
+
+        .left div a {
+            text-decoration: none;
+            color: #2491d7;
+            padding-top: 2000px;
+        }
+
+        .right {
+            background-color: #CDCDCD;
+            height: 600px;
+            text-align: center;
+        }
+
+        .right button {
+            height: 90px;
+            width: 80%;
+        }
+
+        #footer {
+            text-align: center;
+            background-color: grey;
+            color: white;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            [class*="col-"] {
+                width: 100%;
+            }
+
+            header {
+                background-color: blue;
+            }
+
+            header li a {
+                font-size: 15px;
+            }
+
+            .left {
+                height: 150px;
+            }
+
+            .right {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <ul>
+        <li><a href="#">Logo</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+<div class="row">
+    <div>
+        <div class="col-3">
+            <div class="left">
+                <br>
+                <div><a href="#">Link</a></div>
+                <br>
+                <div><a href="#">Link</a></div>
+                <br>
+                <div><a href="#">Link</a></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="col-6">
+            <div>
+                <h2>Welcome</h2>
+                <br>
+                <p>Đối với các định nghĩa khác, xem <a href="">Việt Nam (định hướng)</a> và <a href="">các tên gọi của
+                    nước Việt
+                    Nam.</a></p>
+                <p><b>Việt Nam</b>, tên gọi chính thức là <b>Cộng hòa Xã hội chủ nghĩa Việt Nam</b>, là quốc gia nằm ở
+                    cực Đông của
+                    <a href="">bán đảo Đông Dương</a> thuộc khu vực <a href="">Đông Nam Á</a>, giáp với <a href="">Lào,
+                        Campuchia,
+                        Trung Quốc, biển Đông</a> và <a href="">vịnh Thái Lan.</a></p>
+                <p>Lãnh thổ Việt Nam xuất hiện con người sinh sống từ thời đại đồ đá cũ. Lịch sử Việt Nam cổ đại bắt đầu
+                    với các nhà
+                    nước Văn Lang, Âu Lạc. Âu Lạc bị nhà Triệu từ phương Bắc thôn tính vào đầu thế kỷ thứ 2 TCN sau đó
+                    là thời kỳ
+                    Bắc thuộc kéo dài hơn một thiên niên kỷ. Chế độ quân chủ độc lập được tái lập sau chiến thắng của
+                    Ngô Quyền trước
+                    nhà Nam Hán. Sự kiện này mở đường cho các triều đại độc lập kế tiếp và trong suốt giai đoạn lịch sử
+                    trung đại, quốc
+                    gia này tiếp tục giành chiến thắng trước các cuộc chiến tranh xâm lược từ phương Bắc và dần mở rộng
+                    về phía nam.
+                    Thời kỳ Bắc thuộc cuối cùng kết thúc sau chiến thắng trước nhà Minh của nghĩa quân Lam Sơn.</p>
+                <p>Sang đến thời kỳ cận đại, Việt Nam lần lượt trải qua các giai đoạn Pháp thuộc và Nhật thuộc. Sau khi
+                    Nhật Bản đầu
+                    hàng Đồng Minh, lãnh thổ Việt Nam - Liên bang Đông Dương được các cường quốc tạo điều kiện cho Pháp
+                    thu hồi. Kết
+                    thúc Thế chiến II, Việt Nam trải qua nhiều biến động với sự can thiệp trên danh nghĩa giải giáp quân
+                    đội Nhật Bản
+                    của các lực lượng Đồng Minh bao gồm Anh, Pháp (miền Nam), Trung Hoa Dân Quốc (miền Bắc). Nhà nước
+                    Việt Nam Dân chủ
+                    Cộng hòa ra đời khi Hồ Chí Minh tuyên bố độc lập vào năm 1945 sau thành công của Cách mạng Tháng
+                    Tám. Chính thể này
+                    chống lại Liên hiệp Pháp cùng Quốc gia Việt Nam trong Chiến tranh Đông Dương lần thứ nhất và giành
+                    chiến thắng. Sau
+                    năm 1954, Việt Nam bị chia cắt thành hai vùng tập kết quân sự, lấy ranh giới là vĩ tuyến 17. Xung
+                    đột gia tăng dẫn
+                    tới Chiến tranh Việt Nam với sự can thiệp sâu rộng của Hoa Kỳ cùng đồng minh hỗ trợ cho chính thể
+                    Việt Nam Cộng hòa
+                    và kết thúc với chiến thắng của Việt Nam Dân chủ Cộng hòa/Cộng hòa Miền Nam Việt Nam cùng Mặt trận
+                    Dân tộc Giải
+                    phóng Miền Nam Việt Nam.</p>
+            </div>
+            <hr>
+            <div>
+                <h2>Test</h2>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="col-3">
+            <div class="right">
+                <div>
+                    <button>ADS</button>
+                    <br>
+                    <br>
+                    <button>ADS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-12">
+    <div id="footer">Footer Text</div>
+</div>
+</body>
+</html>
