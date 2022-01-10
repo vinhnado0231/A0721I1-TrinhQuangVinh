@@ -44,4 +44,15 @@ public class ProductServiceImpl implements ProductService {
     public void remove(int id) {
         products.remove(id);
     }
+
+    @Override
+    public Product findByName(String name) {
+        List<Product> products = findAll();
+        for (Product value : products) {
+            if (value.getName().equals(name)) {
+                return value;
+            }
+        }
+        return null;
+    }
 }
