@@ -93,14 +93,14 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
-    private void showEditForm(HttpServletRequest req, HttpServletResponse resp) {
-        int id = Integer.parseInt(req.getParameter("id"));
+    private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
         Product product = this.products.findById(id);
         RequestDispatcher dispatcher;
-        req.setAttribute("product", product);
-        dispatcher = req.getRequestDispatcher("product/edit.jsp");
+        request.setAttribute("products", product);
+        dispatcher = request.getRequestDispatcher("product/edit.jsp");
         try {
-            dispatcher.forward(req, resp);
+            dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
@@ -108,10 +108,9 @@ public class ProductServlet extends HttpServlet {
 
     private void showDeleteFrom(HttpServletRequest req, HttpServletResponse resp) {
         int id = Integer.parseInt(req.getParameter("id"));
-
         Product product = this.products.findById(id);
         RequestDispatcher dispatcher;
-        req.setAttribute("product", product);
+        req.setAttribute("products", product);
         dispatcher = req.getRequestDispatcher("product/delete.jsp");
         try {
             dispatcher.forward(req, resp);
@@ -124,7 +123,7 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Product myProduct = this.products.findById(id);
         RequestDispatcher dispatcher;
-        request.setAttribute("product", myProduct);
+        request.setAttribute("products", myProduct);
         dispatcher = request.getRequestDispatcher("product/view.jsp");
         try {
             dispatcher.forward(request, response);
@@ -145,17 +144,16 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
-    static int id = 0;
+    static int idf = 0;
 
     private void createProduct(HttpServletRequest request, HttpServletResponse response) {
-        id++;
+        idf++;
         String name = request.getParameter("name");
         int amount = Integer.parseInt(request.getParameter("amount"));
-        double price = Double.parseDouble(request.getParameter("amount"));
+        double price = Double.parseDouble(request.getParameter("price"));
         String descripton = request.getParameter("description");
-        Product product = new Product(id, name, amount, price, descripton);
+        Product product = new Product(idf, name, amount, price, descripton);
         products.save(product);
-        request.setAttribute("msg", "New product was created");
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/create.jsp");
         try {
             dispatcher.forward(request, response);
@@ -170,7 +168,7 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         int amount = Integer.parseInt(request.getParameter("amount"));
-        double price = Double.parseDouble(request.getParameter("amount"));
+        double price = Double.parseDouble(request.getParameter("price"));
         String desc = request.getParameter("description");
         RequestDispatcher dispatcher;
         Product myProduct = products.findById(id);
@@ -202,13 +200,13 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
-    private void findProduct(HttpServletRequest req, HttpServletResponse resp) {
-        String name = req.getParameter("name");
+    private void findProduct(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
         Product product = this.products.findByName(name);
-        req.setAttribute("product", product);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("product/view.jsp");
+        request.setAttribute("products", product);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("product/view.jsp");
         try {
-            dispatcher.forward(req, resp);
+            dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
             e.printStackTrace();
         }

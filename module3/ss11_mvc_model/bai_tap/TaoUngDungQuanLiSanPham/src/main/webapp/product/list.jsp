@@ -27,13 +27,13 @@
     <a href="/products?action=create"> Create new product</a>
 </p>
 <p>
-    <a href="/products?action=search"> Search product by name</a>
+    <a href="/products?action=find"> Search product by name</a>
 </p>
 <table>
     <tr>
         <th>Name</th>
         <th>Amount</th>
-        <th>Price (Thousand Dong) </th>
+        <th>Price (million VND) </th>
         <th>Description</th>
         <th colspan="2">Action</th>
     </tr>
