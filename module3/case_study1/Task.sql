@@ -22,7 +22,7 @@ left join loai_khach on loai_khach.ma_loai_khach=khach_hang.ma_loai_khach
 left join dich_vu on hop_dong.ma_dich_vu=dich_vu.ma_dich_vu
 left join hop_dong_chi_tiet on hop_dong.ma_hop_dong=hop_dong_chi_tiet.ma_hop_dong
 left join dich_vu_di_kem on dich_vu_di_kem.ma_dich_vu_di_kem=hop_dong_chi_tiet.ma_dich_vu_di_kem
-group by hop_dong.ma_hop_dong;
+group by hop_dong.ma_hop_dong,hop_dong.ma_dich_vu;
 
     
 -- Yeu cau 6:
@@ -52,7 +52,7 @@ group by ho_ten;
 select month(ngay_lam_hop_dong) as thang,count(hop_dong.ma_dich_vu) as so_luong_khach_hang from dich_vu
 inner join hop_dong on hop_dong.ma_dich_vu=dich_vu.ma_dich_vu
 where year(ngay_lam_hop_dong)=2021
-group by month(ngay_lam_hop_dong)
+group by thang
 order by month(ngay_lam_hop_dong);
 
 -- yeu cau 10:
