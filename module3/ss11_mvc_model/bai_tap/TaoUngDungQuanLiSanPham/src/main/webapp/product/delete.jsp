@@ -17,20 +17,20 @@
                 <td>${requestScope["product"].getName()}</td>
             </tr>
             <tr>
-                <td>Name: </td>
+                <td>Amount: </td>
+                <td>${requestScope["product"].getAmount()}</td>
+            </tr>
+            <tr>
+                <td>Price: </td>
                 <td>${requestScope["product"].getPrice()}</td>
             </tr>
             <tr>
-                <td>Name: </td>
-                <td>${requestScope["product"].getDescription()}</td>
-            </tr>
-            <tr>
-                <td>Name: </td>
-                <td>${requestScope["product"].getSupply()}</td>
+                <td>Description: </td>
+                <td>${requestScope["product"].getDescript()}</td>
             </tr>
             <tr>
                 <td><input type="submit" value="Detele Product"></td>
-                <td><a href="${pageContext.request.contextPath}/products">Back to product list</a> </td>
+                <td><a href="/products">Back to product list</a> </td>
             </tr>
         </table>
     </fieldset>

@@ -8,7 +8,7 @@
 <p>
     <a href="${pageContext.request.contextPath}/products">Back to product list</a>
 </p>
-<form method="post">
+<form method="post" >
     <fieldset>
         <legend>Prodcut Information</legend>
         <table>
@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td>Amount:</td>
-                <td><input type="text" name="price" id="amount" value="${requestScope["product"].getAmount()}"></td>
+                <td><input type="text" name="amount" id="amount" value="${requestScope["product"].getAmount()}"></td>
             </tr>
             <tr>
                 <td>Price:</td>
@@ -27,7 +27,7 @@
             <tr>
                 <td>Desciption:</td>
                 <td><input type="text" name="description" id="description"
-                           value="${requestScope["product"].getDescription()}"></td>
+                           value="${requestScope["product"].getDescript()}"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Update Product"></td>

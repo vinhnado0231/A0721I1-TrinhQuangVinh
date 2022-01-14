@@ -23,7 +23,7 @@
     </tr>
     <tr>
         <td>Description: </td>
-        <td>${requestScope["product"].getDescription()}</td>
+        <td>${requestScope["product"].getDescript()}</td>
     </tr>
 </table>
 </body>

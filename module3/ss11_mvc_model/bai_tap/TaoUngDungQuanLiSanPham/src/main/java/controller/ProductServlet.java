@@ -26,7 +26,7 @@ public class ProductServlet extends HttpServlet {
             case "create":
                 createProduct(request, response);
                 break;
-            case "edit":
+            case "update":
                 updateProduct(request, response);
                 break;
             case "delete":
@@ -40,7 +40,6 @@ public class ProductServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        display(request, response);
         if (action == null) {
             action = "";
         }
@@ -59,6 +58,7 @@ public class ProductServlet extends HttpServlet {
 
             case "view":
                 viewProduct(request, response);
+                break;
 
             case "find":
                 showFindForm(request, response);
@@ -97,7 +97,7 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = this.products.findById(id);
         RequestDispatcher dispatcher;
-        request.setAttribute("products", product);
+        request.setAttribute("product", product);
         dispatcher = request.getRequestDispatcher("product/edit.jsp");
         try {
             dispatcher.forward(request, response);
@@ -110,7 +110,7 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("id"));
         Product product = this.products.findById(id);
         RequestDispatcher dispatcher;
-        req.setAttribute("products", product);
+        req.setAttribute("product", product);
         dispatcher = req.getRequestDispatcher("product/delete.jsp");
         try {
             dispatcher.forward(req, resp);
@@ -123,7 +123,7 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Product myProduct = this.products.findById(id);
         RequestDispatcher dispatcher;
-        request.setAttribute("products", myProduct);
+        request.setAttribute("product", myProduct);
         dispatcher = request.getRequestDispatcher("product/view.jsp");
         try {
             dispatcher.forward(request, response);
@@ -144,7 +144,7 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
-    static int idf = 0;
+    static int idf = 6;
 
     private void createProduct(HttpServletRequest request, HttpServletResponse response) {
         idf++;
@@ -178,7 +178,7 @@ public class ProductServlet extends HttpServlet {
         myProduct.setDescript(desc);
         products.update(id, myProduct);
         request.setAttribute("product", myProduct);
-        dispatcher = request.getRequestDispatcher("product/update.jsp");
+        dispatcher = request.getRequestDispatcher("product/edit.jsp");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -203,7 +203,7 @@ public class ProductServlet extends HttpServlet {
     private void findProduct(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("name");
         Product product = this.products.findByName(name);
-        request.setAttribute("products", product);
+        request.setAttribute("product", product);
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/view.jsp");
         try {
             dispatcher.forward(request, response);
