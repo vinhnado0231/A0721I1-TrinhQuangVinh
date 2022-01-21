@@ -3,16 +3,15 @@ package controller;
 import dao.UserDAO;
 import model.User;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns = "/users")
 public class UserServlet extends HttpServlet {
@@ -37,6 +36,9 @@ public class UserServlet extends HttpServlet {
                 case "edit":
                     updateUser(request, response);
                     break;
+                case "find":
+                    findUser(request, response);
+                    break;
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
@@ -60,6 +62,12 @@ public class UserServlet extends HttpServlet {
                     break;
                 case "delete":
                     deleteUser(request, response);
+                    break;
+                case "find":
+                    showFindForm(request, response);
+                    break;
+                case "sort":
+                    sortUser(request, response);
                     break;
                 default:
                     listUser(request, response);
@@ -92,6 +100,12 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("user", existingUser);
         dispatcher.forward(request, response);
 
+    }
+
+    private void showFindForm(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/find.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void insertUser(HttpServletRequest request, HttpServletResponse response)
@@ -127,5 +141,21 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         dispatcher.forward(request, response);
+    }
+
+    private void findUser(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+        String country = request.getParameter("country");
+        List<User> listUser = userDAO.selectByCountry(country);
+        request.setAttribute("listUser", listUser);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    private void sortUser(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+        List<User> listUser = userDAO.sortByName();
+        request.setAttribute("listUser", listUser);
+        request.getRequestDispatcher("user/list.jsp").forward(request, response);
     }
 }

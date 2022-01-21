@@ -1,6 +1,5 @@
 package dao;
 
-import dao.IUserDAO;
 import model.User;
 
 import java.sql.*;
@@ -11,10 +10,8 @@ public class UserDAO implements IUserDAO {
     private String jdbcURL = "jdbc:mysql://localhost:3306/demo?useSSL=false";
     private String jdbcUsername = "root";
     private String jdbcPassword = "123456";
-
     private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES " +
             " (?, ?, ?);";
-
     private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
@@ -77,7 +74,6 @@ public class UserDAO implements IUserDAO {
     }
 
     public List<User> selectAllUsers() {
-
         // using try-with-resources to avoid closing resources (boiler plate code)
         List<User> users = new ArrayList<>();
         // Step 1: Establishing a Connection
@@ -139,5 +135,46 @@ public class UserDAO implements IUserDAO {
                 }
             }
         }
+    }
+
+    @Override
+    public List<User> selectByCountry(String coun) {
+        List<User> users = new ArrayList<>();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                if (coun.equals(country)) {
+                    users.add(new User(id, name, email, country));
+                }
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return users;
+    }
+
+    @Override
+    public List<User> sortByName() throws SQLException {
+        List<User> users = new ArrayList<>();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement("select * from users order by name asc;");) {
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                User user = new User(id, name, email, country);
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return users;
     }
 }
