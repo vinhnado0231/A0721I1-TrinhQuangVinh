@@ -4,6 +4,8 @@
     <title>Title</title>
 </head>
 <body>
+<form method="post">
 
+</form>
 </body>
 </html>

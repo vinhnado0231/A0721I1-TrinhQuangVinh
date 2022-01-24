@@ -27,7 +27,7 @@ public class CustomerController extends HttpServlet {
                     createCustomer(request, response);
                     break;
                 case "update":
-                    // updateCustomer(request,response);
+                     updateCustomer(request,response);
                     break;
                 case "delete":
                     deleteCustomer(request, response);
