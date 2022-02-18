@@ -2,7 +2,7 @@ package controller;
 
 
 import model.Customer;
-import service.impl.EmployeeService
+import service.impl.EmployeeService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -78,7 +78,7 @@ public class EmployeeController extends HttpServlet {
     }
     private void displayAllEmployee(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Customer> employee = EmployeeService.getEmployeeList();
-        request.setAttribute("employee", employee);
+        request.setAttribute("employees", employees);
         RequestDispatcher dispatcher = request.getRequestDispatcher("employeer/list.jsp");
         dispatcher.forward(request, response);
     }
