@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a href="/blog">Back to blog list</a>
+</p>
+<label>Title: </label> <br>
+<label th:text="${blog.title}"></label><br>
+<label>Name author: </label> <br>
+<label th:text="${blog.author}"></label><br>
+<label th:text="${blog.category.getName()}"></label>
+<label>Date blog: </label> <br>
+<label th:text="${blog.date}"></label><br>
+<label>Content: </label><br>
+<label th:text="${blog.content}"></label>
+</body>
+</html>
