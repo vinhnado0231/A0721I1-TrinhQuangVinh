@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Create Successfull</h3>
+<h3>Here is your infomation:</h3>
+<form th:object="user">
+    <label th:text="${user.firstName}"></label>
+    <label th:text="${user.lastName}"></label>
+    <label th:text="${user.age}"></label>
+    <label th:text="${user.email}"></label>
+    <label th:text="${user.phoneNumber}"></label>
+</form>
+</body>
+</html>
