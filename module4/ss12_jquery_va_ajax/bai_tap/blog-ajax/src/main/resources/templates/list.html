@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        function addNewBlog() {
+            let title = $('#title').val();
+            let author = $('#author').val();
+            let content = $('#content').val();
+            let blog = {
+                title: title,
+                author:author,
+                content: content
+            };
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "POST",
+                data: JSON.stringify(blog),
+                url: "/blog/create",
+                success: successHandler
+            });
+            event.preventDefault();
+        }
+
+        function loadNewBlog() {
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "GET",
+                url: "/blog/load",
+                success: successHandler
+            });
+            event.preventDefault();
+        }
+
+        function successHandler() {
+            $.ajax({
+                type: "GET",
+                url: "/blog/list",
+                success: function (data) {
+                    let content = '    <tr>\n' +
+                        '        <td>Title</td>\n' +
+                        '        <td>Author</td>\n' +
+                        '        <td>Content</td>\n' +
+                        '    </tr>';
+                    for (let i = 0; i < data.length; i++) {
+                        content += '<td>' + data[i].title + '</td>' +
+                            '<td>' + data[i].author + '</td>' +
+                            '<td>' + data[i].content + '</td>' +
+                            '</tr>'
+                    }
+                    $('blogList').html(content);
+                }
+            })
+        }
+
+        function search(){
+            let search = $('#search').val();
+            $.ajax({
+                type: "GET",
+                data: {search: search},
+                url: `/blog/search`,
+                success: function (data) {
+                    let content = '    <tr>\n' +
+                        '        <td>Title</td>\n' +
+                        '        <td>Author</td>\n' +
+                        '        <td>Content</td>\n' +
+                        '    </tr>';
+                    for (let i = 0; i < data.length; i++) {
+                        content += '<td>' + data[i].title + '</td>' +
+                            '<td>' + data[i].author + '</td>' +
+                            '<td>' + data[i].content + '</td>' +
+                            '</tr>'
+                    }
+                    $('blogList').html(content);
+                }
+            })
+            event.preventDefault();
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="text" id="search"  name="search">
+    <input type="submit" value="Search" onclick="search()">
+</form>
+<form>
+    <table>
+        <tr>
+            <input type="hidden" id="id">
+            <td>Title:</td>
+            <td><input type="text" id="title" placeholder="title"></td>
+        </tr>
+        <tr>
+            <td>Author:</td>
+            <td><input type="text" id="author" placeholder="author"></td>
+        </tr>
+        <tr>
+            <td>Content:</td>
+            <td><input type="text" id="content" placeholder="content"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create" onclick="addNewBlog()"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Load" onclick="loadNewBlog()"></td>
+        </tr>
+    </table>
+</form>
+<h1>Blog List</h1>
+<table id="blogList">
+    <tr>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Content</td>
+    </tr>
+    <th:block th:each="blog : ${list}">
+        <td th:text="${blog.title}"></td>
+        <td th:text="${blog.author}"></td>
+        <td th:text="${blog.content}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
