@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+</head>
+<body>
+<h1>Create customer</h1>
+<p>
+    <a href="/customer">Customer list</a>
+</p>
+<form th:action="@{/customer/create}" th:object="${customer}" method="post">
+    <table>
+        <tr>
+            <td>Customer Name:</td>
+            <td><input type="text" th:field="*{customer_name}" th:if="${#fields.hasErrors('customer_name')}" th:errors="*{customer_name}"/></td>
+        </tr>
+        <tr>
+            <td>Customer Birthday:</td>
+            <td><input type="date" th:field="*{customer_birthday}"/></td>
+        </tr>
+        <tr>
+            <td>Customer Gender:</td>
+            <td>
+                <select th:field="*{customer_gender}">
+                    <option th:value="${true}" >Male</option>
+                    <option th:value="${false}" >Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Customer ID:</td>
+            <td><input type="text" th:field="*{customer_id_card}" th:if="${#fields.hasErrors('customer_id_card')}" th:errors="*{customer_id_card}"/></td>
+        </tr>
+        <tr>
+            <td>Customer Phone:</td>
+            <td><input type="text" th:field="*{customer_phone}"  th:if="${#fields.hasErrors('customer_phone')}" th:errors="*{customer_phone}"/></td>
+        </tr>
+        <tr>
+            <td>Customer Email:</td>
+            <td><input type="text" th:field="*{customer_email}"  th:if="${#fields.hasErrors('customer_email')}" th:errors="*{customer_email}"/></td>
+        </tr>
+        <tr>
+            <td>Customer Address:</td>
+            <td><input type="text" th:field="*{customer_address}"  th:if="${#fields.hasErrors('customer_address')}" th:errors="*{customer_address}"/></td>
+        </tr>
+        <tr>
+            <td>Customer Type ID:</td>
+            <td>
+            <select th:field="${customer.customerType.customer_type_id}">
+                <option th:each="customerType :${listCustomerType}" th:value="${customerType.getCustomer_type_id()}">
+                    <p th:text="${customerType.getCustomer_type_name()}"></p>
+                </option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create customer"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

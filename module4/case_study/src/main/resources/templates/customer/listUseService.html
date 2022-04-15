@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Birth</th>
+        <th>CustomerType</th>
+        <th>List Attach Service</th>
+    </tr>
+    <tr th:each="customer :${listCustomer}">
+        <td th:text="${customer.getCustomer_id()}"></td>
+        <td th:text="${customer.getCustomer_name()}"></td>
+        <td th:text="${customer.getCustomer_birthday()}"></td>
+        <td th:text="${customer.getCustomerType().getCustomer_type_name()}"></td>
+        <td>
+            <div th:each="contract: ${customer.getContracts()}">
+                <p th:each="contractDetail: ${contract.contractDetails}" th:text="${contractDetail.attachServices.getAttach_service_name()}"></p>
+            </div>
+        </td>
+    </tr>
+</table>
+<div>
+        <a th:href="@{'/customer/use-service'(page=${listCustomer.number - 1})}" th:if="${listCustomer.hasPrevious()}">Back</a>
+        <span th:text="${listCustomer.number + 1}"></span>/<span th:text="${listCustomer.totalPages}"></span>
+        <a th:href="@{'/customer/use-service'(page=${listCustomer.number + 1})}" th:if="${listCustomer.hasNext()}">Next</a>
+
+</div>
+</body>
+</html>

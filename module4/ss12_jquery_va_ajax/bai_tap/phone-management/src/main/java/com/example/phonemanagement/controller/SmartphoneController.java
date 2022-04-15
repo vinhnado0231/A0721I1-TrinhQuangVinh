@@ -50,7 +50,7 @@ public class SmartphoneController {
     }
 
     @PostMapping("/edit")
-    public  void edit( @RequestBody Smartphone smartphone){
+    public void edit(@RequestBody Smartphone smartphone){
         smartphoneService.save(smartphone);
     }
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+<h2>Create Employee</h2>
+<a th:href="@{/employee}">List Employee</a>
+
+
+<form th:action="@{/employee/edit}" th:object="${employee}" method="post">
+    <input th:field="*{employee_id}" type="hidden">
+    <label>Name</label>
+    <input th:field="*{employee_name}" type="text" ><br/>
+    <p th:if="${#fields.hasErrors('employee_name')}" th:errors="*{employee_name}">Employee Name</p>
+    <label>Birthday</label>
+    <input type="date" th:field="*{employee_birthday}"><br/>
+    <label>Id Card</label>
+    <input th:field="*{employee_card}" type="text" >
+    <p th:if="${#fields.hasErrors('employee_card')}" th:errors="*{employee_card}">Employee Id Card</p><br/>
+    <label>Salary</label>
+    <input th:field="*{employee_salary}" type="text"  ><br/>
+    <label>Phone</label>
+    <input th:field="*{employee_phone}" type="text"  ><br/>
+    <label>Email</label>
+    <input th:field="*{employee_email}" type="text" >
+    <p th:if="${#fields.hasErrors('employee_email')}" th:errors="*{employee_email}">Employee Email</p><br/>
+    <label>Address</label>
+    <input th:field="*{employee_address}" type="text" >
+    <p th:if="${#fields.hasErrors('employee_address')}" th:errors="*{employee_address}">Employee Address</p><br/>
+    <label>Position</label>
+    <select th:field="*{position}" >
+        <option th:each="position :${listPosition}" th:value="${position.getPosition_id()}"><p
+                th:text="${position.getPosition_name()}"></p></option>
+    </select>
+    <br/>
+    <label>Division</label>
+    <select th:field="*{division}">
+        <option th:each="division :${listDivision}" th:value="${division.getDivision_id()}"><p
+                th:text="${division.getDivition_name()}"></p></option>
+    </select>
+    <br/>
+    <label>Education</label>
+    <select th:field="*{educationDegree}" >
+        <option th:each="educationDegree : ${listEducation}"
+                th:value="${educationDegree.getEducation_degree_id()}"><p
+                th:text="${educationDegree.getEducatiom_degree_name()}"></p></option>
+    </select>
+    <br/>
+    <button type="submit">Edit</button>
+
+</form>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package com.example.thuc_hanh.Security;
+package com.example.thuc_hanh.security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

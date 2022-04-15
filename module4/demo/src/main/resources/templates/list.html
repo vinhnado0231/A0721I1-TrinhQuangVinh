@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h2 style="margin-top: 35px; margin-bottom: 10px; font-weight: 400;">List Question</h2>
+<a th:href="@{/question/create}">Tạo câu hỏi mới</a>
+<form th:action="@{/question/search}">
+    <input type="text" id="title" name="title">
+    <button type="submit">Search</button>
+</form>
+<br>
+<table border="1px">
+    <tr>
+        <th>STT</th>
+        <th>Tiêu đề</th>
+        <th>Loại câu hỏi</th>
+        <th>Ngày đăng</th>
+        <th>Tình trạng</th>
+        <th colspan="2">Tính năng</th>
+    </tr>
+    <tr th:each="question,i :${listQuestion}">
+        <th th:text="${i.count}"></th>
+        <td th:text="${question.getTitle()}"></td>
+        <td th:text="${question.getQuestionType().getName()}"></td>
+        <td th:text="${question.getDateCreate()}"></td>
+        <td th:text="${question.getStatus()}"></td>
+        <td><a th:href="@{question/edit/{id}(id=${question.getId()})}">Cập nhật </a></td>
+        <td><a th:href="@{question/delete/{id}(id=${question.getId()})}">Xoá</a></td>
+    </tr>
+</table>
+<center>
+    <div>
+        <a th:href="@{'/question'(page=${listQuestion.number - 1})}" th:if="${listQuestion.hasPrevious()}">Back</a>
+        <span th:text="${listQuestion.number + 1}"></span>/<span th:text="${listQuestion.totalPages}"></span>
+        <a th:href="@{'/question'(page=${listQuestion.number + 1})}" th:if="${listQuestion.hasNext()}">Next</a>
+    </div>
+</center>
+</body>
+</html>

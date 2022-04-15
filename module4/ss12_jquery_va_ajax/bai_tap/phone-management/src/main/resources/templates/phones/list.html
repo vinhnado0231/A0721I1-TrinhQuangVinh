@@ -115,7 +115,7 @@
 
         $(document).ready(function () {
             //sư kiện nào thực hiện Ajax
-            $('.editSmartphone').click(function (event) {
+            $(document).on("click",".editSmartphone",function (event) {
                 //lay du lieu
                 let a = $(this);
                 let smartphoneId = a.attr("href");

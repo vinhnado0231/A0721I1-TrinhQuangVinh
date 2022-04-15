@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/customer}">Go to Customer Page</a><br/>
+<a th:href="@{/employee}">Go to Employee Page</a><br/>
+<a th:href="@{/contract}">Go to Contract Page</a><br/>
+<br/>
+<a th:href="@{/service/create}">Create new Service</a>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description Other Convenience</th>
+        <th>Number Of Floors</th>
+        <th>Cost</th>
+        <th>Rent Type</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="service :${listService}">
+        <td th:text="${service.service_id}"></td>
+        <td th:text="${service.service_name}"></td>
+        <td th:text="${service.description_other_convenience}"></td>
+        <td th:text="${service.number_of_floors}"></td>
+        <td th:text="${service.service_cost}"></td>
+        <td th:text="${service.rentType.rent_type_name}"></td>
+        <td><a th:href="@{/service/delete/__${service.service_id}__}">Delete</a></td>
+    </tr>
+</table>
+<a th:href="@{'/service'(page=${listService.number - 1})}"
+   th:if="${listService.hasPrevious()}">Back</a>
+<span th:text="${listService.number + 1}"></span>/<span th:text="${listService.totalPages}"></span>
+<a th:href="@{'/service'(page=${listService.number + 1})}" th:if="${listService.hasNext()}">Next</a>
+</body>
+</html>

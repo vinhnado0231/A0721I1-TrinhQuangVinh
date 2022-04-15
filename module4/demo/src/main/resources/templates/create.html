@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/question}">List Question</a>
+
+<h2>Tạo mới câu hỏi</h2>
+<form th:action="@{/question/create}" th:object="${question1}" method="post">
+    <label>Tiêu đề</label>
+    <input th:field="*{title}" type="text" ><br/>
+    <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title</p>
+    <label>Nội dung</label>
+    <textarea th:field="*{question}" style="height: 300px;width: 500px;"></textarea>
+    <p th:if="${#fields.hasErrors('question')}" th:errors="*{question}">Question</p>
+    <br/>
+    <select th:field="*{questionType}" >
+        <option th:each="questionType :${questionTypeList}" th:value="${questionType.getId()}"><p
+                th:text="${questionType.getName()}"></p></option>
+    </select>
+    <br/>
+    <button type="submit">Tạo câu hỏi</button>
+</form>
+</body>
+</html>

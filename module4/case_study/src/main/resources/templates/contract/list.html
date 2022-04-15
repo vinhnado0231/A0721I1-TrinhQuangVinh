@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/contract/create}">Create new Contract</a>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Date Start</th>
+        <th>Date End</th>
+        <th>Total Money</th>
+        <th>Employee</th>
+        <th>Customer</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="contract :${listContract}">
+        <td th:text="${contract.contract_id}"></td>
+        <td th:text="${contract.contract_start_date}"></td>
+        <td th:text="${contract.contract_end_date}"></td>
+        <td th:text="${contract.getContract_total_money()}"></td>
+        <td th:text="${contract.employee.employee_name}"></td>
+        <td th:text="${contract.customers.customer_name}"></td>
+        <td><a th:href="@{/contract/delete/__${contract.contract_id}__}">Delete</a></td>
+    </tr>
+</table>
+<div>
+    <a th:href="@{'/contract'(page=${listContract.number - 1})}" th:if="${listContract.hasPrevious()}">Back</a>
+    <span th:text="${listContract.number + 1}"></span>/<span th:text="${listContract.totalPages}"></span>
+    <a th:href="@{'/contract'(page=${listContract.number + 1})}" th:if="${listContract.hasNext()}">Next</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/contract}"> List Contract</a>
+<form th:action="@{/contract/create}" th:object="${contract}" method="post">
+    <label>Start Date</label>
+    <input th:field="*{contract_start_date}" type="date"><br/>
+
+    <label>End Date</label>
+    <input type="date" th:field="*{contract_end_date}"><br/>
+
+    <spa>Deposit</spa>
+    <input th:field="*{contract_deposit}" type="text"><br/>
+
+    <label>Total Money</label>
+    <input th:field="*{contract_total_money}" type="text"><br/>
+    >
+    <label>
+        <label>Employee</label>
+        <select th:field="*{employee.employee_id}">
+            <option th:each="employees :${employee}" th:value="${employees.employee_id}"><p
+                    th:text="${employees.getEmployee_name()}"></p></option>
+        </select>
+    </label><br/>
+
+    <label>
+        <label>Customer</label>
+        <select th:field="*{customers.customer_id}">
+            <option th:each="customerType :${customer}" th:value="${customerType.getCustomer_id()}"><p
+                    th:text="${customerType.getCustomer_name()}"></p></option>
+        </select>
+    </label><br/>
+
+    <label>
+        <label>Service</label>
+        <select th:field="*{services.service_id}">
+            <option th:each="services :${service}" th:value="${services.service_id}"><p
+                    th:text="${services.getService_name()}"></p></option>
+        </select>
+    </label><br/>
+
+    <button type="submit">Create</button>
+</form>
+</body>
+</html>
