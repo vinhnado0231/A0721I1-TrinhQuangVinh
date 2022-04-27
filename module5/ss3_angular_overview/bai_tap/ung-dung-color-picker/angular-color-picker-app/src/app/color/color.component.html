@@ -1,0 +1,22 @@
+<div>
+  <label>Enter R:</label>
+  <input  type="range" min="0" max="255" value="10" [(ngModel)]="red" (click)="calcColorCode()">
+  <br>
+  <label>Enter G:</label>
+  <input type="range" min="0" max="255" value="10" [(ngModel)]="green" (click)="calcColorCode()">
+  <br>
+  <label>Enter B:</label>
+  <input type="range" min="0" max="255" value="10" [(ngModel)]="blue" (click)="calcColorCode()">
+</div>
+<div>
+  <p>Color:</p>
+</div>
+<div style="width:100px;height:100px;border-radius:25px" [ngStyle]="{'background': colorCode}"></div>
+<br>
+<div>
+  <label>RGB: {{red}},{{green}},{{blue}}</label>
+  <br>
+  <label>Hex: {{colorCode.toLocaleUpperCase()}}</label>
+</div>
+
+
