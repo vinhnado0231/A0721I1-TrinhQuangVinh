@@ -17,7 +17,7 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link active" aria-current="page" href="#!">
+          <a class="nav-link active" aria-current="page" href="http://localhost:4200/">
             <div>
               <i class="fas fa-home fa-lg mb-1"></i>
             </div>
@@ -25,7 +25,7 @@
           </a>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link" href="#!">
+          <a class="nav-link" [href]="url[0]">
             <div>
               <i class="far fa-envelope fa-lg mb-1"></i>
               <span class="badge rounded-pill badge-notification bg-dark">11</span>
@@ -34,7 +34,7 @@
           </a>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link disabled" aria-disabled="true" href="#!">
+          <a class="nav-link disabled" aria-disabled="true" [href]="url[1]">
             <div>
               <i class="far fa-envelope fa-lg mb-1"></i>
               <span class="badge rounded-pill badge-notification bg-dark">11</span>
@@ -43,7 +43,7 @@
           </a>
         </li>
         <li class="nav-item dropdown text-center mx-2 mx-lg-1">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+          <a class="nav-link dropdown-toggle" [href]="url[2]" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
              aria-expanded="false">
             <div>
               <i class="far fa-envelope fa-lg mb-1"></i>
@@ -53,13 +53,14 @@
           </a>
           <!-- Dropdown menu -->
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+
+            <li><a class="dropdown-item" [href]="url[3]">Action</a></li>
+            <li><a class="dropdown-item" [href]="url[4]">Another action</a></li>
             <li>
               <hr class="dropdown-divider" />
             </li>
             <li>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" [href]="url[5]">Something else here</a>
             </li>
           </ul>
         </li>
