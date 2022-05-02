@@ -1,0 +1,3 @@
+<div *ngFor="let item of rating" class="btn-group" >
+  <button (click)="select(item.value)" [ngStyle]="{'background-color':item.active? '#ffe400':'#101012'}" class="btn fa fa-star btn-outline-secondary m-1 " >{{item.value}}</button>
+</div>
