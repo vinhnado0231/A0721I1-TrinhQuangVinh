@@ -33,8 +33,8 @@ export class RegisterFormComponent implements OnInit {
     this.registerForm = this.fb.group({
       email: new FormControl('', [Validators.required,Validators.email]),
       pwGroup: new FormGroup({
-        password: new FormControl( '' ,[Validators.required]) ,
-        confirmPassword: new FormControl('')
+        password: new FormControl( '' ,[Validators.required,Validators.minLength(6)]) ,
+        confirmPassword: new FormControl('',[Validators.required,Validators.minLength(6)])
       } , comparePassword),
       country: new FormControl('', [Validators.required]),
       age: new FormControl('', [Validators.required, Validators.min(18)]),

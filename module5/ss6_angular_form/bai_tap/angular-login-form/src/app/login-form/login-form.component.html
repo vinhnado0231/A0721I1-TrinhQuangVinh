@@ -1,0 +1,29 @@
+<div>
+  <h1 style="text-align: center">Login</h1>
+</div>
+<div>
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+    <div>
+      <label for="email">Email</label>
+      <div>
+        <input type="email" class="form-control" id="email" formControlName="email">
+      </div>
+      <div *ngIf="formLogin.get('email')?.errors?.['required'] && formLogin.get('email')?.touched">
+        <p class="text-danger">Vui long nhap email</p>
+      </div>
+      <div *ngIf="formLogin.get('email')?.errors?.['email'] && formLogin.get('email')?.touched">
+        <p class="text-danger">Email khong hop le</p>
+      </div>
+    </div>
+    <div>
+      <label for="password" >Password</label>
+      <div>
+        <input type="password" class="form-control" id="password" formControlName="password">
+      </div>
+      <div *ngIf="formLogin.get('password')?.errors?.['required'] && formLogin.get('password')?.touched">
+        <p class="text-danger">Vui long nhap password</p>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!formLogin.valid">Sign in</button>
+  </form>
+</div>
