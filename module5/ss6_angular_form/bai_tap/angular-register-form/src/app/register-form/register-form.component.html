@@ -1,0 +1,76 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <p>
+    <label for="email">Email </label>
+    <input type="text" id="email" name="email" formControlName="email">
+  </p>
+  <p class="text-danger"
+     *ngIf="registerForm?.get('email')?.errors?.['required'] && registerForm?.get('email')?.touched">Email is
+    required </p>
+  <p *ngIf="registerForm?.get('email')?.errors?.['email']">Email wrong</p>
+
+  <fieldset formGroupName="pwGroup">
+    <p>
+      <label for="password">Password </label>
+      <input type="password" id="password" name="password" formControlName="password">
+    <p class="text-danger"
+       *ngIf="registerForm?.get(['pwGroup','password'])?.errors?.['required'] && registerForm?.get(['pwGroup','password'])?.touched">
+      Password is required </p>
+
+    <p>
+      <label for="confirmPass">Confirm Password </label>
+      <input type="password" id="confirmPass" name="confirmPass" formControlName="confirmPass">
+    </p>
+    <div class="alert alert-danger"
+         *ngIf="registerForm?.hasError('passwordnotmatch',
+['pwGroup']) && registerForm?.get('pwGroup')?.untouched">
+      Password does not match!
+    </div>
+
+  </fieldset>
+  <p>
+    <label for="country">Country </label>
+    <select id="country" name="country" formControlName="country">
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
+      </option>
+    </select>
+  </p>
+
+  <p class="text-danger"
+     *ngIf="registerForm?.get('country')?.errors?.['required'] && registerForm?.get('country')?.touched">
+    Country is required </p>
+
+  <p>
+    <label for="age">Age </label>
+    <input type="number" id="age" name="age" formControlName="age">
+  </p>
+
+  <p class="text-danger"
+     *ngIf="registerForm?.get('age')?.errors?.['required'] && registerForm?.get('age')?.touched">
+    Age is required </p>
+
+  <p>
+    <label for="gender">Gender </label>
+    <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+    <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+  </p>
+
+  <p class="text-danger"
+     *ngIf="registerForm?.get('gender')?.errors?.['required'] && registerForm?.get('gender')?.touched">
+    Gender is required</p>
+
+  <p>
+    <label for="phone">Phone </label>
+    <input type="phone" id="phone" name="phone" formControlName="phone">
+  </p>
+
+  <p class="text-danger"
+     *ngIf="registerForm?.get('country')?.errors?.['required'] && registerForm?.get('country')?.touched">
+    Phone is required </p>
+
+  <p>
+    <button type="submit" [disabled]="!registerForm.valid">Register</button>
+  </p>
+
+</form>
