@@ -18,12 +18,12 @@
       Password is required </p>
 
     <p>
-      <label for="confirmPass">Confirm Password </label>
-      <input type="password" id="confirmPass" name="confirmPass" formControlName="confirmPass">
+      <label for="confirmPassword">Confirm Password </label>
+      <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword">
     </p>
     <div class="alert alert-danger"
          *ngIf="registerForm?.hasError('passwordnotmatch',
-['pwGroup']) && registerForm?.get('pwGroup')?.untouched">
+['pwGroup']) && registerForm?.get('pwGroup')?.touched">
       Password does not match!
     </div>
 
@@ -62,15 +62,19 @@
 
   <p>
     <label for="phone">Phone </label>
-    <input type="phone" id="phone" name="phone" formControlName="phone">
+    <input type="text" id="phone" name="phone" formControlName="phone">
   </p>
 
   <p class="text-danger"
-     *ngIf="registerForm?.get('country')?.errors?.['required'] && registerForm?.get('country')?.touched">
+     *ngIf="registerForm?.get('phone')?.errors?.['required'] && registerForm?.get('phone')?.touched">
     Phone is required </p>
 
+  <p class="text-danger"
+     *ngIf="registerForm?.get('phone')?.errors?.['pattern'] && registerForm?.get('phone')?.touched">
+    Phone is invalid </p>
+
   <p>
-    <button type="submit" [disabled]="!registerForm.valid">Register</button>
+    <button type="submit" >Register</button>
   </p>
 
 </form>
