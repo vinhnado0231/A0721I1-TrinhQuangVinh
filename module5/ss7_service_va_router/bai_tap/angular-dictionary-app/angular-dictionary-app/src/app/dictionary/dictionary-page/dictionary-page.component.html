@@ -1,0 +1,13 @@
+<h1>Danh sách các từ trong Dictionary:</h1>
+<table class="table table.border">
+  <tr>
+    <td>STT</td>
+    <td>Word</td>
+    <td>Function</td>
+  </tr>
+  <tr *ngFor="let word of words;index as i ">
+    <td>{{i+1}}</td>
+    <td>{{word.word}}</td>
+    <td><input type="button" value="Detail" class="btn btn-light" [routerLink]="['../../dictionary/detail',i]"></td>
+  </tr>
+</table>
