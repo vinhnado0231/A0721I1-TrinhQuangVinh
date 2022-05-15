@@ -1,0 +1,63 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "IPhone 12",
+      "price": 2400000,
+      "description": "New",
+      "category": "Mobile phone"
+    },
+    {
+      "id": 2,
+      "name": "IPhone 11",
+      "price": 1560000,
+      "description": "Like new",
+      "category": "Mobile phone"
+    },
+    {
+      "id": 3,
+      "name": "IPhone X",
+      "price": 968000,
+      "description": "97%",
+      "category": "Mobile phone"
+    },
+    {
+      "id": 4,
+      "name": "IPhone 8",
+      "price": 7540000,
+      "description": "98%",
+      "category": "Mobile phone"
+    },
+    {
+      "id": 5,
+      "name": "IPhone 11 Pro",
+      "price": 1895000,
+      "description": "Like new",
+      "category": "Mobile phone"
+    },
+    {
+      "id": 6,
+      "name": "dfg",
+      "price": 12,
+      "description": "3424dfa",
+      "category": "Car"
+    },
+    {
+      "id": 7,
+      "name": "sdjkfn",
+      "price": 2134123,
+      "description": "cà",
+      "category": "Car"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Mobile phone"
+    },
+    {
+      "id": 2,
+      "name": "Car"
+    }
+  ]
+}
