@@ -40,9 +40,9 @@ export class ProductUpdateComponent implements OnInit {
   }
 
   updateProduct(id: number) {
-    const product = this.productForm.value;
-    this.productService.updateProduct(id, product);
-    this.router.navigate(['/product/list']);
+    this.productService.updateProduct(id,this.productForm.value).subscribe(data => {
+      this.router.navigateByUrl('product/list')
+    })
   }
 
   getCategory() {

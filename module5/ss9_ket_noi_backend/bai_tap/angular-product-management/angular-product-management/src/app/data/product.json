@@ -34,20 +34,6 @@
       "price": 1895000,
       "description": "Like new",
       "category": "Mobile phone"
-    },
-    {
-      "id": 6,
-      "name": "dfg",
-      "price": 12,
-      "description": "3424dfa",
-      "category": "Car"
-    },
-    {
-      "id": 7,
-      "name": "sdjkfn",
-      "price": 2134123,
-      "description": "cà",
-      "category": "Car"
     }
   ],
   "category": [
