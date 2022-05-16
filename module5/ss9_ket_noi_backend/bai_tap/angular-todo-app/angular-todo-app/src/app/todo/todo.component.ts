@@ -12,12 +12,13 @@ import {Router} from "@angular/router";
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
   inputForm: FormGroup;
-  contentForm: FormGroup;
   todo: Todo;
 
   constructor(private todoService: TodoService, private router: Router) {
     this.inputForm = new FormGroup({
-      input: new FormControl()
+      id: new FormControl(''),
+      content: new FormControl(''),
+      complete: new FormControl(false)
     })
   }
 
@@ -27,22 +28,36 @@ export class TodoComponent implements OnInit {
     })
   }
 
-  change() {
-
-  }
-
   toggleTodo(id: number) {
     this.todoService.findById(id).subscribe(data => {
       this.todo = data;
+      console.log(this.todo);
       this.todo.complete = !this.todo.complete;
-      this.todoService.update(id, this.todo).subscribe();
-    })
-  }
-  getTodo(id: number) {
-    return this.todoService.findById(id).subscribe(todo => {
-      this.contentForm = new FormGroup({
-        content: new FormControl(todo.content),
-      });
     });
+    this.todoService.update(this.todo.id, this.todo).subscribe(
+      () => {
+      },
+      () => {
+      },
+      () => {
+        console.log('ok toggleTodo');
+        window.location.reload();
+      });
+  }
+
+  change() {
+    this.todo = this.inputForm.value
+    this.todoService.save(this.todo).subscribe(() => {
+    }, () => {
+      console.log('error')
+    }, () => {
+      console.log('ok change')
+      this.ngOnInit();
+    })
+    this.inputForm.reset();
+  }
+
+  deleteTodo(id: number) {
+    this.todoService.delete(id).subscribe();
   }
 }

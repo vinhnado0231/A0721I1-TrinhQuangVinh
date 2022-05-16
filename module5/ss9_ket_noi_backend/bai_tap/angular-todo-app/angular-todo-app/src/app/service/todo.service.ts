@@ -16,16 +16,16 @@ export class TodoService {
     return this.httpClient.get<Todo[]>(URL_API);
   }
 
-  save(product): Observable<Todo> {
-    return this.httpClient.post<Todo>(URL_API,product);
+  save(todo: Todo): Observable<Todo> {
+    return this.httpClient.post<Todo>(URL_API,todo);
   }
 
   findById(id: number): Observable<Todo> {
     return this.httpClient.get<Todo>(`${URL_API}/${id}`);
   }
 
-  update(id: number, product: Todo): Observable<Todo> {
-    return this.httpClient.put<Todo>(`${URL_API}/${id}`, product);
+  update(id: number, todo: Todo): Observable<Todo> {
+    return this.httpClient.put<Todo>(`${URL_API}/${id}`, todo);
   }
 
   delete(id: number): Observable<Todo> {

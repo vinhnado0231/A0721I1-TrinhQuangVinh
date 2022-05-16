@@ -3,22 +3,22 @@
     {
       "id": 1,
       "content": "Do homework 1",
-      "complete": "true"
+      "complete": false
     },
     {
       "id": 2,
       "content": "Do homework 2",
-      "complete": "false"
+      "complete": false
     },
     {
       "id": 3,
       "content": "Do homework 3",
-      "complete": "true"
+      "complete": false
     },
     {
       "id": 4,
-      "content": "Do homework 4",
-      "complete": "false"
+      "content": "sdfds",
+      "complete": false
     }
   ]
 }
