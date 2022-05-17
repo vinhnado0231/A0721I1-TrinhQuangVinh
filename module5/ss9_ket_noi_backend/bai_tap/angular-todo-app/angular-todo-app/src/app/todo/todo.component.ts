@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Todo} from "../model/todo";
-import {FormControl, FormGroup} from "@angular/forms";
-import {TodoService} from "../service/todo.service";
-import {Router} from "@angular/router";
+import {Todo} from '../model/todo';
+import {FormControl, FormGroup} from '@angular/forms';
+import {TodoService} from '../service/todo.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-todo',
@@ -19,13 +19,13 @@ export class TodoComponent implements OnInit {
       id: new FormControl(''),
       content: new FormControl(''),
       complete: new FormControl(false)
-    })
+    });
   }
 
   ngOnInit(): void {
     this.todoService.getAll().subscribe(data => {
       this.todos = data;
-    })
+    });
   }
 
   toggleTodo(id: number) {
@@ -39,13 +39,13 @@ export class TodoComponent implements OnInit {
   }
 
   change() {
-    this.todo = this.inputForm.value
+    this.todo = this.inputForm.value;
     this.todoService.save(this.todo).subscribe(() => {
     }, () => {
-      console.log('error')
+      console.log('error');
     }, () => {
       this.ngOnInit();
-    })
+    });
     this.inputForm.reset();
   }
 

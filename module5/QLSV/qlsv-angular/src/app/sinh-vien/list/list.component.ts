@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Sv} from "../../model/sv";
 import {SinhVienService} from "../../service/sinh-vien.service";
 import {Router} from "@angular/router";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-list',
@@ -10,12 +11,16 @@ import {Router} from "@angular/router";
 })
 export class ListComponent implements OnInit {
   Svs: Sv[] = [];
+  formSearch: FormGroup;
 
   constructor(private sinhVienService: SinhVienService, private router: Router) {
+    this.formSearch = new FormGroup({
+      name: new FormControl('', [Validators.required])
+    })
   }
 
   ngOnInit(): void {
-    this.getAll()
+    this.getAll();
   }
 
   getAll() {
@@ -36,5 +41,17 @@ export class ListComponent implements OnInit {
         this.ngOnInit()
       }
     );
+  }
+
+  search() {
+    const name = this.formSearch.get('name').value;
+    this.sinhVienService.searchSVByName(name).subscribe(data => {
+      this.Svs = data;
+    })
+  }
+
+  reset(){
+    this.formSearch.reset();
+    this.ngOnInit();
   }
 }

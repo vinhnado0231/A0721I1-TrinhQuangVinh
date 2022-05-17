@@ -31,4 +31,8 @@ export class SinhVienService {
   deleteSV(id: number): Observable<Sv> {
     return this.httpClient.delete<Sv>(`${URL_API}/${id}`);
   }
+
+  searchSVByName(name:string):Observable<Sv[]>{
+    return this.httpClient.get<Sv[]>(`${URL_API}/?name_like=${name}`)
+  }
 }
