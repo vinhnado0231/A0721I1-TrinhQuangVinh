@@ -1,0 +1,24 @@
+<table *ngIf="Svs" class="table table-striped table-striped table-dark table-bordered">
+  <tr class="thead-dark">
+    <th>STT</th>
+    <th>Tên</th>
+    <th>MSSV</th>
+    <th>Lớp</th>
+    <th>DTB</th>
+    <th>SDT</th>
+    <th>Hành động</th>
+  </tr>
+  <tr *ngFor="let sv of Svs;let i = index">
+    <td>{{i + 1}}</td>
+    <td>{{sv.name}}</td>
+    <td>{{sv.mssv}}</td>
+    <td>{{sv.lopSH.nameLop}}</td>
+    <td>{{sv.dtb}}</td>
+    <td>{{sv.sdt}}</td>
+    <td class="d-flex align-items-center">
+      <button class="btn btn-primary " [routerLink]="['/student/edit/' , sv.id]">Edit</button>
+      <button class="btn btn-danger" (click)="deleteConfirm(sv.id)">Delete</button>
+    </td>
+  </tr>
+</table>
+

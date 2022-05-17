@@ -1,0 +1,92 @@
+{
+  "sv": [
+    {
+      "mssv": "123",
+      "name": "znbmdxvv",
+      "lopSH": {
+        "id": 2,
+        "nameLop": "20TCLC-DT2"
+      },
+      "dtb": "12",
+      "sdt": "123123",
+      "id": 2
+    },
+    {
+      "mssv": "435",
+      "name": "adg",
+      "lopSH": {
+        "id": 2,
+        "nameLop": "20TCLC-DT2"
+      },
+      "dtb": "123",
+      "sdt": "123",
+      "id": 4
+    },
+    {
+      "mssv": "324",
+      "name": "ds",
+      "lopSH": {
+        "id": 2,
+        "nameLop": "20TCLC-DT2"
+      },
+      "dtb": "12",
+      "sdt": "435",
+      "id": 5
+    },
+    {
+      "mssv": "182937",
+      "name": "backman",
+      "lopSH": {
+        "id": 3,
+        "nameLop": "20TCLC-DT3"
+      },
+      "dtb": "4",
+      "sdt": "2189371298",
+      "id": 6
+    },
+    {
+      "mssv": "213",
+      "name": "fgb",
+      "lopSH": {
+        "id": 2,
+        "nameLop": "20TCLC-DT2"
+      },
+      "dtb": "12",
+      "sdt": "12",
+      "id": 7
+    },
+    {
+      "mssv": "213",
+      "name": "fgb",
+      "lopSH": {
+        "id": 2,
+        "nameLop": "20TCLC-DT2"
+      },
+      "dtb": "12",
+      "sdt": "12",
+      "id": 8
+    }
+  ],
+  "lopSH": [
+    {
+      "id": 1,
+      "nameLop": "20TCLC-DT1"
+    },
+    {
+      "id": 2,
+      "nameLop": "20TCLC-DT2"
+    },
+    {
+      "id": 3,
+      "nameLop": "20TCLC-DT3"
+    },
+    {
+      "id": 4,
+      "nameLop": "20TCLC-DT4"
+    },
+    {
+      "id": 5,
+      "nameLop": "20TCLC-DT5"
+    }
+  ]
+}

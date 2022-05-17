@@ -31,18 +31,11 @@ export class TodoComponent implements OnInit {
   toggleTodo(id: number) {
     this.todoService.findById(id).subscribe(data => {
       this.todo = data;
-      console.log(this.todo);
       this.todo.complete = !this.todo.complete;
-    });
-    this.todoService.update(this.todo.id, this.todo).subscribe(
-      () => {
-      },
-      () => {
-      },
-      () => {
-        console.log('ok toggleTodo');
-        window.location.reload();
+      this.todoService.update(id, this.todo).subscribe(() => {
+        this.ngOnInit();
       });
+    });
   }
 
   change() {
@@ -51,13 +44,14 @@ export class TodoComponent implements OnInit {
     }, () => {
       console.log('error')
     }, () => {
-      console.log('ok change')
       this.ngOnInit();
     })
     this.inputForm.reset();
   }
 
   deleteTodo(id: number) {
-    this.todoService.delete(id).subscribe();
+    this.todoService.delete(id).subscribe(() => {
+      this.ngOnInit();
+    });
   }
 }

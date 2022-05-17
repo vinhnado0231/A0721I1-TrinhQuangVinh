@@ -1,0 +1,34 @@
+{
+  "facility": [
+    {
+      "id": 1,
+      "name": "Dịch vụ 1",
+      "img": "https://vietsensetravel.com/view/at_top-6-resort-nha-trang-view-cuc-dep-chup-hinh-cuc-da_5bf45b3a4ce0ed152efa4911bc200e0c.jpg",
+      "size": 40
+    },
+    {
+      "id": 2,
+      "name": "Dịch vụ 2",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4XJs40jyGlcEPAy9QkLW4xc2ZLqEQsusNTw&usqp=CAU",
+      "size": 50
+    },
+    {
+      "id": 3,
+      "name": "Dịch vụ 3",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD0As_pHMCpW8q9Q2yZGSKKZfwO2YeKkFLcQ&usqp=CAU",
+      "size": 60
+    },
+    {
+      "id": 4,
+      "name": "Dịch vụ 4",
+      "img": "https://acihome.com.vn/wp-content/uploads/2020/07/thiet-ke-resort-mini-khong-gian-dep.jpg",
+      "size": 70
+    },
+    {
+      "id": 5,
+      "name": "Dịch vụ 5",
+      "img": "https://conbuom.vn/wp-content/uploads/2021/03/thiet-ke-resort-mini29-700x469.png",
+      "size": 80
+    }
+  ]
+}

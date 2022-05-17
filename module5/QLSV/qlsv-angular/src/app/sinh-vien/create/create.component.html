@@ -1,0 +1,42 @@
+<form class="container" (ngSubmit)="createSV()" [formGroup]="createForm">
+
+  <label class="form-group w-100">MSSV:
+    <input type="text" class="form-control" formControlName="mssv">
+    <div class="text-danger"
+         *ngIf="createForm?.get('mssv')?.hasError('required') && createForm?.get('mssv')?.touched">Not be empty
+    </div>
+  </label>
+
+  <label class="form-group w-100">Name:
+    <input type="text" class="form-control" formControlName="name">
+    <div class="text-danger"
+         *ngIf="createForm?.get('name')?.hasError('required') && createForm?.get('name')?.touched">Not be empty
+    </div>
+  </label>
+
+  <label class="form-group w-100" formGroupName="lopSH">Lớp sinh hoạt:
+    <select formControlName="id" >
+      <option [ngValue]="c.id" *ngFor="let c of lopSH">
+        {{c.nameLop}}
+      </option>
+    </select>
+    <div class="text-danger"
+         *ngIf="createForm?.get('lopSH')?.hasError('required') && createForm?.get('lopSH')?.touched">Not be empty
+    </div>
+  </label><br/>
+
+  <label class="form-group w-100">Điểm trung bình:
+    <input type="text" class="form-control" formControlName="dtb">
+    <div class="text-danger"
+         *ngIf="createForm?.get('dtb')?.hasError('required') && createForm?.get('dtb')?.touched">Not be empty
+    </div>
+  </label>
+
+  <label class="form-group w-100">Số điện thoại:
+    <input type="text" class="form-control" formControlName="sdt">
+    <div class="text-danger"
+         *ngIf="createForm?.get('sdt')?.hasError('required') && createForm?.get('sdt')?.touched">Not be empty
+    </div>
+  </label>
+  <button type="submit" [disabled]="!createForm.valid" class="btn btn-primary mt-3">Create</button>
+</form>

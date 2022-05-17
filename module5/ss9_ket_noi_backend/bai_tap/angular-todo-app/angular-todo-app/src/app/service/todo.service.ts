@@ -12,24 +12,24 @@ export class TodoService {
 
   constructor(private httpClient: HttpClient) {
   }
-  getAll(): Observable<Todo[]> {
-    return this.httpClient.get<Todo[]>(URL_API);
-  }
+    getAll(): Observable<Todo[]> {
+      return this.httpClient.get<Todo[]>(URL_API);
+    }
 
-  save(todo: Todo): Observable<Todo> {
-    return this.httpClient.post<Todo>(URL_API,todo);
-  }
+    save(todo: Todo): Observable<Todo> {
+      return this.httpClient.post<Todo>(URL_API,todo);
+    }
 
-  findById(id: number): Observable<Todo> {
-    return this.httpClient.get<Todo>(`${URL_API}/${id}`);
-  }
+    findById(id: number): Observable<Todo> {
+      return this.httpClient.get<Todo>(`${URL_API}/${id}`);
+    }
 
-  update(id: number, todo: Todo): Observable<Todo> {
-    return this.httpClient.put<Todo>(`${URL_API}/${id}`, todo);
-  }
+    update(id: number, todo: Todo): Observable<Todo> {
+      return this.httpClient.put<Todo>(`${URL_API}/${id}`, todo);
+    }
 
-  delete(id: number): Observable<Todo> {
-    return this.httpClient.delete<Todo>(`${URL_API}/${id}`);
-  }
+    delete(id: number): Observable<Todo> {
+      return this.httpClient.delete<Todo>(`${URL_API}/${id}`);
+    }
 
 }
