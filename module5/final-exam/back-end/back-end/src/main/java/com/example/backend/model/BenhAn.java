@@ -1,4 +1,6 @@
 package com.example.backend.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
@@ -29,6 +31,9 @@ public class BenhAn {
     @ManyToOne
     @JoinColumn(name = "idBenhNhan" , nullable = false)
     private BenhNhan benhNhan;
+
+    public BenhAn() {
+    }
 
     public Integer getId() {
         return id;
@@ -68,6 +73,15 @@ public class BenhAn {
 
     public void setLiDoNhapVien(String liDoNhapVien) {
         this.liDoNhapVien = liDoNhapVien;
+    }
+
+
+    public BenhNhan getBenhNhan() {
+        return benhNhan;
+    }
+
+    public void setBenhNhan(BenhNhan benhNhan) {
+        this.benhNhan = benhNhan;
     }
 
     public String getPpDieuTri() {

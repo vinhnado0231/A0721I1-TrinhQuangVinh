@@ -1,5 +1,7 @@
 package com.example.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
@@ -16,7 +18,11 @@ public class BenhNhan {
     private String name;
 
     @OneToMany(mappedBy = "benhNhan")
+    @JsonIgnore
     private Set<BenhAn> benhAn;
+
+    public BenhNhan() {
+    }
 
     public int getId() {
         return id;
