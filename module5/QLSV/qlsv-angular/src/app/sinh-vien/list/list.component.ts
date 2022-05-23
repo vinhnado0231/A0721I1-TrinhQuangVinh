@@ -54,4 +54,10 @@ export class ListComponent implements OnInit {
     this.formSearch.reset();
     this.ngOnInit();
   }
+
+  sort() {
+    this.sinhVienService.sortSVByName().subscribe(data =>{
+      this.Svs = data;
+    })
+  }
 }

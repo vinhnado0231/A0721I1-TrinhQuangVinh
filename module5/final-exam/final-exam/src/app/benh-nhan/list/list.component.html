@@ -1,0 +1,32 @@
+<table *ngIf="benhAns" class="table table-striped table-striped table-dark table-bordered">
+  <tr class="thead-dark">
+    <th>STT</th>
+    <th>Mã bệnh án</th>
+    <th>Mã bệnh nhân</th>
+    <th>Tên bệnh nhân</th>
+    <th>Ngày nhập viện</th>
+    <th>Ngày ra viện</th>
+    <th>Lý do nhập viện</th>
+    <th>Phương pháp điều trị</th>
+    <th>Bác sĩ điều trị</th>
+    <th>Tác vụ</th>
+  </tr>
+  <tr *ngFor="let benhAn of benhAns;let i = index">
+    <td>{{i + 1}}</td>
+    <td>{{benhAn.idBenhAn}}</td>
+    <td>{{benhAn.benhNhan.idBenhNhan}}</td>
+    <td>{{benhAn.benhNhan.name}}</td>
+    <td>{{benhAn.dateStart}}</td>
+    <td>{{benhAn.dateEnd}}</td>
+    <td>{{benhAn.liDoNhapVien}}</td>
+    <td>{{benhAn.ppDieuTri}}</td>
+    <td>{{benhAn.bacSi}}</td>
+    <td class="d-flex align-items-center">
+      <button class="btn btn-primary " [routerLink]="['/benhAn/edit/' , benhAn.id]">Edit</button>
+      <button class="btn btn-danger" (click)="deleteConfirm(benhAn.idBenhAn,benhAn.id)">Delete</button>
+    </td>
+  </tr>
+</table>
+
+
+

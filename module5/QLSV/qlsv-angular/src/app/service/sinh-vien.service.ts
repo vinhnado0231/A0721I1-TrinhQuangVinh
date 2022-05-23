@@ -12,12 +12,13 @@ export class SinhVienService {
 
   constructor(private httpClient: HttpClient) {
   }
+
   getAll(): Observable<Sv[]> {
     return this.httpClient.get<Sv[]>(URL_API);
   }
 
   saveSV(sv): Observable<Sv> {
-    return this.httpClient.post<Sv>(URL_API,sv);
+    return this.httpClient.post<Sv>(URL_API, sv);
   }
 
   findSVById(id: number): Observable<Sv> {
@@ -32,7 +33,11 @@ export class SinhVienService {
     return this.httpClient.delete<Sv>(`${URL_API}/${id}`);
   }
 
-  searchSVByName(name:string):Observable<Sv[]>{
-    return this.httpClient.get<Sv[]>(`${URL_API}/?name_like=${name}`)
+  searchSVByName(name: string): Observable<Sv[]> {
+    return this.httpClient.get<Sv[]>(`${URL_API}/?name_like=${name}`);
+  }
+
+  sortSVByName(): Observable<Sv[]> {
+    return this.httpClient.get<Sv[]>(`${URL_API}/?_sort=name&_order=asc`);
   }
 }

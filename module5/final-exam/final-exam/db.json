@@ -1,0 +1,30 @@
+{
+  "benhAn": [
+    {
+      "id": 2,
+      "idBenhAn": "BA-002",
+      "benhNhan": {
+        "idBenhNhan": "BN-1234",
+        "name": "NVC"
+      },
+      "dateStart": "02-02-1999",
+      "dateEnd": "03-02-1999",
+      "liDoNhapVien": "Điều trị bệnh 23",
+      "ppDieuTri": "Mổ",
+      "bacSi": "Bac si 4"
+    },
+    {
+      "id": 3,
+      "idBenhAn": "BA-002",
+      "benhNhan": {
+        "idBenhNhan": "BN-1234",
+        "name": "NVC"
+      },
+      "dateStart": "02-02-1999",
+      "dateEnd": "03-02-1999",
+      "liDoNhapVien": "Điều trị bệnh 23",
+      "ppDieuTri": "Mổ",
+      "bacSi": "Bac si 4"
+    }
+  ]
+}

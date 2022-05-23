@@ -1,0 +1,37 @@
+<form class="container" (ngSubmit)="editBenhAn()" [formGroup]="editForm" *ngIf="editForm">
+
+  <label class="form-group w-100">Mã bệnh án:
+    <input type="text" class="form-control" formControlName="idBenhAn"  disabled>
+  </label>
+
+  <div formGroupName="benhNhan">
+    <label class="form-group w-100">Mã bệnh nhân:
+      <input type="text" class="form-control" formControlName="idBenhNhan" disabled>
+    </label>
+
+    <label class="form-group w-100">Tên bệnh nhân:
+      <input type="text" class="form-control" formControlName="name" >
+    </label>
+  </div>
+
+  <label class="form-group w-100">Ngày nhập viện:
+    <input type="date" class="form-control" >
+  </label>
+
+  <label class="form-group w-100">Ngày ra viện:
+    <input type="date" class="form-control" >
+  </label>
+
+  <label class="form-group w-100">Lý do nhập viện:
+    <textarea class="form-control" formControlName="liDoNhapVien"></textarea>
+  </label>
+
+  <label class="form-group w-100">Phương pháp điều trị:
+    <textarea class="form-control" formControlName="ppDieuTri" ></textarea>
+  </label>
+
+  <label class="form-group w-100">Bác sĩ điều trị:
+    <input type="text" class="form-control" formControlName="bacSi">
+  </label>
+  <button type="submit" class="btn btn-primary mt-3">Edit</button>
+</form>
