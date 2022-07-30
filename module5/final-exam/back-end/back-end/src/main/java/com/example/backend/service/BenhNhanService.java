@@ -27,4 +27,5 @@ public class BenhNhanService {
     public List<BenhNhan> getBenhNhanByName(String name) {
         return benhNhanRepository.getBenhNhanByName(name);
     }
+
 }

@@ -28,7 +28,7 @@
     </style>
 </head>
 <body>
-<form action="/customers">
+<form action="/customers" method="post">
     <table>
         <tr>
             <td>Customer Id</td>

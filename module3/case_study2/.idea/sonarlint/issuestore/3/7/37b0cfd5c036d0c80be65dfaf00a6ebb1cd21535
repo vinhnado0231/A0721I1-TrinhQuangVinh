@@ -1,0 +1,32 @@
+
+P
+java:S1161":Add the "@Override" annotation above this method signature(‹¨¯¿
+V	java:S125"<This block of commented-out lines of code should be removed.(íøçýÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(”¡ÿŒ
+v
+java:S3923"[Remove this conditional structure or edit its code blocks so that they're not all the same.(ë´åÝþÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ž³§
+P	java:S125"<This block of commented-out lines of code should be removed.(ïßÃ6
+V	java:S125!"<This block of commented-out lines of code should be removed.(Ý¬™Äüÿÿÿÿ
+U
+java:S1161+":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
+Z
+java:S2147E"DCombine this catch with the one at line 67, which has the same body.(Ãôþ•
+V	java:S1253"<This block of commented-out lines of code should be removed.(Ýô €ÿÿÿÿÿ
+Q	java:S1256"<This block of commented-out lines of code should be removed.(´×ð”
+V	java:S1259"<This block of commented-out lines of code should be removed.(¬Ùôäøÿÿÿÿ
+’
+java:S1130I"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(îþ×¼ÿÿÿÿÿ
+‡
+java:S1130I"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(îþ×¼ÿÿÿÿÿ
+W
+java:S1172I"<Remove these unused method parameters "request", "response".(îþ×¼ÿÿÿÿÿ
+V	java:S125J"<This block of commented-out lines of code should be removed.(‚ÓÑúÿÿÿÿ
+A
+java:S1128"+Remove this unused import 'model.Customer'.(°¶ãê
+N
+java:S1128"9Remove this unused import 'service.impl.EmployeeService'.(¸§«_
+R
+java:S1128"<Remove this unused import 'javax.servlet.RequestDispatcher'.(Ëöò¼
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ

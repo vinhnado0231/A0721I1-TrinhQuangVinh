@@ -42,6 +42,6 @@ public class BenhAnController {
         return new ResponseEntity<List<BenhNhan>>(benhNhanList, HttpStatus.OK);
     }
 
-    @GetMapping("/benh-an/")
+
 }
 

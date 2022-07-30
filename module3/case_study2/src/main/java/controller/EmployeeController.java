@@ -18,30 +18,24 @@ public class EmployeeController extends HttpServlet {
     //    private IEmployeeService iEmployeeService = new EmployeeService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        tring action = request.getParameter("action");
+ //       String action = request.getParameter("action");
         if (action == null) {
             action = "";
         }
-        try {
-            switch (action) {
-                case "create":
-                    createEmployee(request, response);
-                    break;
-                case "update":
-                    updateEmployee(request, response);
-                    break;
-                case "delete":
-                    deleteEmployee(request, response);
-                    break;
-                case "search":
-                    break;
-                default:
-                    break;
-            }
-        } catch (ServletException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        switch (action) {
+            case "create":
+//                   createEmployee(request, response);
+                break;
+            case "update":
+//                  updateEmployee(request, response);
+                break;
+            case "delete":
+//                 deleteEmployee(request, response);
+                break;
+            case "search":
+                break;
+            default:
+                break;
         }
 
     }
@@ -54,13 +48,13 @@ public class EmployeeController extends HttpServlet {
         try {
             switch (action) {
                 case "create":
-                    showCreateForm(request, response);
+   //                 showCreateForm(request, response);
                     break;
                 case "update":
-                    showUpdateForm(request, response);
+   //                 showUpdateForm(request, response);
                     break;
                 case "delete":
-                    showDeleteForm(request, response);
+      //              showDeleteForm(request, response);
                     break;
                 case "search":
                     break;
@@ -77,9 +71,9 @@ public class EmployeeController extends HttpServlet {
         }
     }
     private void displayAllEmployee(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Customer> employee = EmployeeService.getEmployeeList();
-        request.setAttribute("employees", employees);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("employeer/list.jsp");
-        dispatcher.forward(request, response);
+//      //  List<Customer> employee = EmployeeService.getEmployeeList();
+//        request.setAttribute("employees", employees);
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("employeer/list.jsp");
+//        dispatcher.forward(request, response);
     }
 }

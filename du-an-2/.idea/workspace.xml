@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3fae500c-f2a2-49a4-9be2-5298ac56e8b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/config/MailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/config/MyConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/case_study2/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/case_study2/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module5/final-exam/back-end/.idea/back-end.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/repository/IAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/repository/IAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/service/IAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/service/IAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/service/impl/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/service/impl/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/service/impl/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/java/project2/service/impl/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-BE/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0721I1-Repo-FE/auntion-product/src/app/home/forgot-password/forgot-password.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/A0721I1-Repo-FE/auntion-product/src/app/home/forgot-password/forgot-password.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/controller/CaseStudyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/controller/CaseStudyServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/model/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/model/Contract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/model/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/model/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/repository/ICustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/repository/ICustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/repository/impl/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/repository/impl/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/repository/impl/DataBaseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/repository/impl/DataBaseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/service/ICustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/service/impl/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/classes/java/main/service/impl/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/libs/case_study2-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/libs/case_study2-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/src/main/java/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/src/main/java/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/src/main/java/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/src/main/java/repository/ICustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/src/main/java/repository/impl/DataBaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/src/main/java/repository/impl/DataBaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/src/main/webapp/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/case_study2/src/main/webapp/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/case_study2/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/classes/java/main/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/classes/java/main/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/classes/java/main/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/classes/java/main/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/classes/java/main/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/classes/java/main/service/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/bai_tap/TaoUngDungQuanLiSanPham/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss11_mvc_model/thuc_hanh/UngDungQuanLiKhachHang/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module3/ss9_tong_quan_ung_dung_web/thuc_hanh/UngDungChuyenDoiTienTe/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/final-exam/back-end/back-end/src/main/java/com/example/backend/controller/BenhAnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/final-exam/back-end/back-end/src/main/java/com/example/backend/controller/BenhAnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/final-exam/back-end/back-end/src/main/java/com/example/backend/service/BenhNhanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/final-exam/back-end/back-end/src/main/java/com/example/backend/service/BenhNhanService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2BnczxDOZoUmRHgXME1CDfHBTJy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3fae500c-f2a2-49a4-9be2-5298ac56e8b0" name="Changes" comment="" />
+      <created>1657545555836</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657545555836</updated>
+      <workItem from="1657545557190" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
